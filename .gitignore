@@ -1,0 +1,15 @@
+# environment / data symlinks
+.venv
+sindy_data
+# third-party EHD solver clone (github.com/gyf135/EHD-convection-2D) with simulation data
+EHD-convection-2D/
+# run outputs, references, session transcripts
+logs/
+ref/
+*.txt
+claude_artifacts/*.json
+.claude/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.npz

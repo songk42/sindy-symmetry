@@ -1,0 +1,59 @@
+family,method,arxiv_id,error_source_targeted,availability,relevance_to_your_pipeline
+1 integral/weak form,WSINDy (ODE),2005.04339,pointwise-derivative noise,pysindy: WeakPDELibrary / ps.WeakSINDy,"medium — tested, mixed result"
+1 integral/weak form,WSINDy (PDE),2007.02848,derivative noise in PDEs,pysindy,low
+1 integral/weak form,WSINDy consistency theory,2211.16000,explains when weak form helps,—,medium — read
+1 integral/weak form,Fourier Weak SINDy,2604.20141,random test-function placement,no,high — fixes your WSINDy seeding/failures
+1 integral/weak form,WENDy,2302.13271,"derivative noise, no ODE solver",external (WENDy.jl / py),medium
+1 integral/weak form,WENDy nonlinear-in-params,2502.08881,nonlinear parameterisations,external,low
+1 integral/weak form,WENDy-IRLS coverage,2510.03365,interval calibration,—,low
+1 integral/weak form,Physically constrained weak-form SR,2102.12006,"noisy, incomplete experimental data",no,medium
+1 integral/weak form,LES-SINDy (Laplace),2411.01719,"high-order derivatives, discontinuities",no,low
+1 integral/weak form,Weak-form modified SINDy,2410.17838,weak form + noise model,no,low
+2 derivatives/denoising,pynumdiff multi-objective,2009.01911,derivative hyperparameters,pysindy: SINDyDerivative,low — already bounded by your dt sweep
+2 derivatives/denoising,A priori denoising comparison,2201.12683,which denoiser to use,—,low
+2 derivatives/denoising,DSINDy,2211.05918,joint state/derivative recovery,no,low
+2 derivatives/denoising,RKTV-INR denoising,2509.14219,noisy trajectory denoising,no,low
+2 derivatives/denoising,Differentiation as systematic uncertainty,2512.12666,reporting differentiation sensitivity,—,medium — cite for your dt sweep
+3 joint state estimation,AD-SINDy (modified SINDy),2009.08810,state + noise distribution jointly,no,medium
+3 joint state estimation,NN + integral form,2309.07193,noisy and scarce data,no,low
+3 joint state estimation,DeepMoD,1904.09406,NN surrogate library,no,low
+3 joint state estimation,Sparsely constrained NN,2011.04336,modular NN + sparse regression,no,low
+3 joint state estimation,Robust SINDy autoencoder,2604.04829,coordinates + denoising,no,low
+3 joint state estimation,EKF-SINDy,2404.07536,filtering with a SINDy model,no,low
+3 joint state estimation,SINDy-EnKF,2607.27137,partial observability,no,medium
+3 joint state estimation,Sparse data assimilation model selection,2105.10068,"hidden variables, chaotic systems",no,HIGH — closest analogue; replaces NRMSE scoring
+4 robust regression,SR3 / constrained SR3,1807.05411,"conditioning, false positives, hard constraints",pysindy: ConstrainedSR3,in use
+4 robust regression,Unified sparse optimization framework,1906.10612,constrained physics-informed fits,pysindy,in use
+4 robust regression,Reweighted L1,2005.13232,noise in state measurements,no,low
+4 robust regression,CINDy,2101.02630,noise-robust support recovery,no,low
+4 robust regression,MIOSR,2206.00176,provably optimal sparsity,pysindy: MIOSR,HIGH — removes magnitude-threshold/scaling fragility
+4 robust regression,Trimmed LASSO,2308.01891,exact vs approximate sparsity,no,medium
+4 robust regression,ILTS-SINDy,2606.28584,outliers/corrupted samples,no,low
+4 robust regression,Tran & Ward exact recovery,1607.01067,highly corrupted data,no,low
+4 robust regression,High-noise toolkit,2111.04870,progressive library culling,no,low
+4 robust regression,Scale-independent regulariser,2603.05201,normalisation distorting thresholding,no,HIGH — your global-scale/collinearity note
+4 robust regression,Ill-conditioning in dictionary learning,2603.11330,multicollinear libraries,—,HIGH — diagnose before anything else
+5 ensembling / UQ,E-SINDy,2111.10992,"inclusion probabilities, low-data/high-noise",pysindy: EnsembleOptimizer,HIGH — cheap on your 32 windows
+5 ensembling / UQ,Ensemble/Bayesian UQ convergence,2301.12649,false-discovery control theory,—,medium
+5 ensembling / UQ,Sparsifying priors (UQ-SINDy),2107.02107,coefficient posteriors,no,medium
+5 ensembling / UQ,BINDy (RJMCMC),2408.08062,posterior over model structure,no,medium
+5 ensembling / UQ,Bayesian model averaging,2604.10854,competing supports,no,medium
+5 ensembling / UQ,Conformal prediction SINDy,2507.11739,distribution-free intervals,no,low
+5 ensembling / UQ,HyperSINDy,2310.04832,stochastic governing equations,no,medium
+5 ensembling / UQ,Multi-step-prediction ensemble,2503.05154,scoring on forecast not residual,no,medium
+6 constraints/structure,Constrained sparse Galerkin regression,1611.03271,energy-preserving quadratics,pysindy: ConstrainedSR3,in use
+6 constraints/structure,Trapping SINDy,2105.01843,long-time boundedness (global stability),pysindy: TrappingSR3,HIGH — targets your failure object
+6 constraints/structure,Local trapping extension,2403.00324,local stability guarantees,pysindy,HIGH
+6 constraints/structure,SINDy-SI (sum-of-squares side info),2310.04227,symmetries/physical laws as certificates,no,medium
+6 constraints/structure,Symmetry-informed term filtering,2604.01592,automated symmetry library restriction,no,medium — compare to your build_Mk
+6 constraints/structure,Buckingham Pi,2202.04643,dimensional consistency,pysindy (utils),low
+6 constraints/structure,SIPHy (port-Hamiltonian),2609.20399,energy structure + spline derivatives,no,low
+6 constraints/structure,Guan/Brunton/Novosselov EHD,2009.11862,the paper being reproduced,—,reference
+7 model selection,AIC/BIC over Pareto front,1701.01773,structure selection,no,medium
+7 model selection,Benchmarking on low-dim chaos (dysts),2302.10787,which variant to expect to win,—,HIGH — read before more variant trials
+7 model selection,Sparsistency / irrepresentability,2106.11936,when support recovery is impossible,—,HIGH — given your collinearity
+7 model selection,PySINDy,2111.08481,implementations,pysindy,reference
+8 stochastic closure,Langevin regression,2009.01006,unresolved DOF as random forcing,no,HIGHEST — matches all your observations
+8 stochastic closure,Langevin + finite-size effects,2103.16791,truncation-set noise amplitude,no,HIGH
+8 stochastic closure,Nonlinear correlations in ROMs,2106.02409,POD overestimates relevant dimension,no,HIGH — bears on your r sweep
+8 stochastic closure,HyperSINDy,2310.04832,learned stochastic dynamics,no,medium
