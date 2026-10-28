@@ -28,16 +28,39 @@ import sympy as sp
 
 import dysts.flows as flows
 
+from equiv_c import EquivC
+from fit_metrics import Evaluator
+
 warnings.filterwarnings("ignore")
 
-DATA_DIR = "/gscratch/stf/songk42/dysts_hf/fine"
+DATA_DIR = os.environ.get("DYSTS_DATA_DIR", "/gscratch/stf/songk42/dysts_hf/fine")
 ALPHA = float(os.environ.get("SINDY_ALPHA", 0.05))  # ridge for STLSQ variants; both refit with alpha=0 on the final support (unbias)
-OUT_DIR = f"/mmfs1/home/songk42/ehd-sindy/logs/symmetric_sindy_dysts/alpha{ALPHA:g}"
+# column scaling: divide each library column by its L2 norm, threshold the scaled coefficients (as in SINDy-SI)
+NORMALIZE = os.environ.get("SINDY_NORMALIZE", "0") == "1"
+# "stlsq" (default): STLSQ family + dense v1 ConstrainedSR3; "sr3": sparse SR3 / ConstrainedSR3 (ridge-free, so
+# SINDY_ALPHA is unused). Noise draws don't depend on this, so runs pair row-by-row.
+METHODS = os.environ.get("SINDY_METHODS", "stlsq")
+SR3_NU = 1.0
+SR3_MAX_ITER = 500
+# Extra side information for the constrained methods (as in SINDy-SI; read from logs/sindy_si_dysts/side_info.csv):
+#   ""       symmetry only (all earlier runs)
+#   "eq"     + equilibria f(x_eq) = 0 as extra equality rows
+#   "eq_mono"+ sampled monotonicity s * d f_i/d x_i (x_k) >= 0 at N_MONO_PTS uniform points in the SINDy-SI ball, as
+#            linear inequalities. Only ConstrainedSTLSQ (QP refit) and ConstrainedSR3's inequality path (l1, one
+#            cvxpy solve, no unbias) can take inequalities; the other methods get the equilibria only.
+# In side-info runs only the constrained methods are fitted (nothing changes for the others).
+SIDE = os.environ.get("SINDY_SIDE", "")
+N_MONO_PTS = 1000
+OUT_DIR = os.path.join(os.environ.get("LOG_DIR", "/mmfs1/home/songk42/ehd-sindy/logs"), "symmetric_sindy_dysts",
+                       (f"alpha{ALPHA:g}" if METHODS == "stlsq" else METHODS) + ("_norm" if NORMALIZE else "")
+                       + (f"_{SIDE}" if SIDE else ""))
 os.makedirs(OUT_DIR, exist_ok=True)
 
 DEGREE = 3
 NOISE_LEVELS = ["exact_xdot", 0.0, 0.01, 0.05]  # fraction of per-channel std; "exact_xdot" = clean x with true RHS as x_dot
 REL_THRESHOLDS = [0.003, 0.01, 0.03, 0.1]  # STLSQ thresholds, relative to max|Xi| of a dense lstsq fit
+if NORMALIZE:
+    REL_THRESHOLDS = REL_THRESHOLDS + [0.3]  # same 5-point grid as sindy_si_dysts.py; relative to max|scaled Xi|
 RNG = np.random.default_rng(0)
 
 
@@ -118,13 +141,46 @@ def symmetry_constraints(G, feature_names, var_names):
     return M_list, C, np.zeros(C.shape[0])
 
 
-def support_metrics(Xi, Xi_true, tol=1e-10):
-    est, true = np.abs(Xi) > tol, np.abs(Xi_true) > tol
-    tp = np.sum(est & true)
-    prec = tp / max(est.sum(), 1)
-    rec = tp / max(true.sum(), 1)
-    f1 = 2 * prec * rec / max(prec + rec, 1e-12)
-    return f1, bool(np.array_equal(est, true))
+def equilibrium_rows(equilibria, powers):
+    """f_hat(x_eq) = 0: for each equilibrium, one row per equation, target order."""
+    n = powers.shape[1]
+    rows = [np.kron(np.eye(n), np.prod(np.asarray(x)[None, :] ** powers, axis=1)[None, :]) for x in equilibria]
+    return np.vstack(rows) if rows else np.zeros((0, powers.shape[0] * n))
+
+
+def prune_rows(A):
+    """Full-row-rank subset of the constraint rows (same pivoted-QR pruning as symmetry_constraints)."""
+    if not len(A):
+        return A
+    rank = np.linalg.matrix_rank(A)
+    _, _, piv = scipy.linalg.qr(A.T, pivoting=True)
+    A = A[np.sort(piv[:rank])]
+    return A[~np.isclose(A, 0).all(axis=1)]
+
+
+def monotone_rows(monotone, powers, center, radius, rng, n_pts=N_MONO_PTS):
+    """A w <= 0 rows for -s * d f_hat_i / d x_i (x_k) <= 0 at n_pts uniform points in the ball (target order)."""
+    h, n = powers.shape
+    z = rng.standard_normal((n_pts, n))
+    pts = center + radius * z / np.linalg.norm(z, axis=1, keepdims=True) * rng.random((n_pts, 1)) ** (1 / n)
+    rows = []
+    for i, j, sgn in monotone:
+        e = powers.copy()
+        coef = e[:, j].astype(float)
+        e[:, j] = np.maximum(e[:, j] - 1, 0)
+        dtheta = coef[None, :] * np.prod(pts[:, None, :] ** e[None, :, :], axis=2)  # (n_pts, h)
+        block = np.zeros((n_pts, h * n))
+        block[:, i * h:(i + 1) * h] = -sgn * dtheta
+        rows.append(block)
+    return np.vstack(rows) if rows else np.zeros((0, h * n))
+
+
+side_info = None
+if SIDE:
+    import ast
+    import zlib
+    side_info = pd.read_csv(os.path.join(os.path.dirname(OUT_DIR), "..", "sindy_si_dysts", "side_info.csv"))
+    side_info = side_info.set_index("system")
 
 
 # %% [markdown]
@@ -195,6 +251,21 @@ for name in names:
           f"C@Xi_true={row['true_constraint_resid']:.1e}")
     if not is_poly or dt_r2 < 0.99:  # dt_r2 < 0.99: CSV sampling doesn't match the dysts RHS, truth unusable
         continue
+    evaluate = Evaluator(X, Xi_true, np.asarray(lib.powers_), dt, md.get("maximum_lyapunov_estimated"))
+    A_ineq = np.zeros((0, C.shape[1]))
+    if SIDE:
+        si = side_info.loc[name]
+        powers = np.asarray(lib.powers_)
+        C = prune_rows(np.vstack([C, equilibrium_rows([np.array(x) for x in ast.literal_eval(si["equilibria"])], powers)]))
+        d = np.zeros(C.shape[0])
+        if SIDE == "eq_mono":
+            A_ineq = monotone_rows([tuple(m) for m in ast.literal_eval(si["monotone"])], powers,
+                                   np.array(ast.literal_eval(si["ball_center"])), float(si["ball_radius"]),
+                                   np.random.default_rng(zlib.crc32(name.encode())))
+        b_ineq = np.zeros(A_ineq.shape[0])
+        viol = np.max(A_ineq @ vec_true) / np.max(np.abs(vec_true)) if len(A_ineq) else 0.0
+        print(f"  side info {SIDE}: {C.shape[0]} equality rows (C@Xi_true={np.max(np.abs(C @ vec_true)):.1e}), "
+              f"{A_ineq.shape[0]} inequality rows (max violation by Xi_true {viol:.1e})")
 
     for noise in NOISE_LEVELS:
         # dysts "fine" data is ~100 samples/period, so 2nd-order FD alone leaves a few-% derivative bias
@@ -211,21 +282,71 @@ for name in names:
                          differentiation_method=diff)
         dense.fit(Xn, t=t, x_dot=xdot)
         coef_scale = np.max(np.abs(dense.coefficients()))
+        if NORMALIZE:  # threshold scale of the column-scaled problem
+            coef_scale = np.max(np.abs(dense.coefficients() * np.linalg.norm(dense.optimizer.Theta_, axis=0)))
 
-        configs = [("ConstrainedSR3_v1", None, True), ("ConstrainedSR3_v1_noaug", None, False)]
-        for rt in REL_THRESHOLDS:
-            configs += [("STLSQ", rt, False), ("STLSQ_aug", rt, True), ("ConstrainedSTLSQ", rt, True),
-                        ("ConstrainedSTLSQ_noaug", rt, False)]
+        configs = []
+        if SIDE and METHODS == "stlsq":
+            # constrained methods only; v1 dense and Equiv-c are raw-library methods
+            configs = [] if NORMALIZE else [("ConstrainedSR3_v1_noaug", None, False)]
+            for rt in REL_THRESHOLDS:
+                configs += [("ConstrainedSTLSQ_noaug", rt, False)] + ([] if NORMALIZE else [("EquivC_cc", rt, False)])
+        elif SIDE and METHODS == "sr3":
+            for rt in REL_THRESHOLDS:
+                configs += [("ConstrainedSR3_l0_noaug", rt, False), ("ConstrainedSR3_l1_noaug", rt, False)]
+        elif METHODS == "stlsq":
+            configs = [] if NORMALIZE else [("ConstrainedSR3_v1", None, True), ("ConstrainedSR3_v1_noaug", None, False)]
+            for rt in REL_THRESHOLDS:
+                configs += [("STLSQ", rt, False), ("STLSQ_aug", rt, True), ("ConstrainedSTLSQ", rt, True),
+                            ("ConstrainedSTLSQ_noaug", rt, False)]
+        elif METHODS == "sr3":
+            # threshold tau = rt * coef_scale, as for STLSQ: l0 prox keeps |w| > sqrt(2 lam nu), l1 shrinks by lam nu
+            for rt in REL_THRESHOLDS:
+                configs += [("SR3_l0", rt, False), ("ConstrainedSR3_l0_noaug", rt, False),
+                            ("ConstrainedSR3_l1_noaug", rt, False)]
 
+        use_ineq = len(A_ineq) > 0
+        # ConstrainedSR3's inequality path: stacked [A; C], separation index = number of inequality rows
+        sr3_ineq = dict(constraint_lhs=np.vstack([A_ineq, C]), constraint_rhs=np.concatenate([b_ineq, d]),
+                        constraint_order="target", inequality_constraints=True, equality_constraints=True,
+                        constraint_separation_index=A_ineq.shape[0]) if use_ineq else None
+        Phi_xdot = None
         for method, rt, augment in configs:
+            if method == "EquivC_cc":
+                if Phi_xdot is None:  # same features / targets as ps.SINDy.fit
+                    Yd = xdot if exact else np.asarray(diff(Xn, t))
+                    Xs = Xn if exact else np.asarray(getattr(diff, "smoothed_x_", Xn))
+                    Phi_xdot = (np.asarray(lib.transform(Xs)), Yd)
+                Xi = EquivC(threshold=rt * coef_scale, constraint=C, constrain_constant=True).fit(*Phi_xdot).coef_
+                sym_resid = max(np.max(np.abs(M @ Xi - Xi @ g.T)) for g, M in zip(G, M_list)) / max(np.max(np.abs(Xi)), 1e-12)
+                fit_rows.append(dict(system=name, noise=str(noise), method=method, rel_threshold=rt, **evaluate(Xi),
+                                     sym_resid=sym_resid))
+                continue
             if method.startswith("ConstrainedSR3_v1"):
-                opt = ps.ConstrainedSR3(constraint_lhs=C, constraint_rhs=d, constraint_order="target",
-                                        equality_constraints=True, reg_weight_lam=0)
+                if use_ineq:  # dense constrained least squares with all side info (cvxpy)
+                    opt = ps.ConstrainedSR3(reg_weight_lam=0, regularizer="l1", **sr3_ineq)
+                else:
+                    opt = ps.ConstrainedSR3(constraint_lhs=C, constraint_rhs=d, constraint_order="target",
+                                            equality_constraints=True, reg_weight_lam=0)
+            elif method.startswith("SR3") or method.startswith("ConstrainedSR3"):
+                tau = rt * coef_scale
+                reg = "l1" if "_l1" in method else "l0"
+                kw = dict(reg_weight_lam=(tau if reg == "l1" else tau ** 2 / 2) / SR3_NU, regularizer=reg,
+                          relax_coeff_nu=SR3_NU, max_iter=SR3_MAX_ITER, unbias=True, normalize_columns=NORMALIZE)
+                if method.startswith("Constrained") and use_ineq and reg == "l1":
+                    kw.pop("unbias")  # inequality path: one cvxpy solve, no thresholding loop, unbias not allowed
+                    opt = ps.ConstrainedSR3(**sr3_ineq, **kw)
+                elif method.startswith("Constrained"):
+                    opt = ps.ConstrainedSR3(constraint_lhs=C, constraint_rhs=d, constraint_order="target",
+                                            equality_constraints=True, **kw)
+                else:
+                    opt = ps.SR3(**kw)
             elif method.startswith("ConstrainedSTLSQ"):
                 opt = ps.ConstrainedSTLSQ(threshold=rt * coef_scale, alpha=ALPHA, constraint_lhs=C,
-                                          constraint_rhs=d, constraint_order="target")
+                                          constraint_rhs=d, constraint_order="target", normalize_columns=NORMALIZE,
+                                          **(dict(inequality_lhs=A_ineq, inequality_rhs=b_ineq) if use_ineq else {}))
             else:
-                opt = ps.STLSQ(threshold=rt * coef_scale, alpha=ALPHA)
+                opt = ps.STLSQ(threshold=rt * coef_scale, alpha=ALPHA, normalize_columns=NORMALIZE)
             model = ps.SINDy(feature_library=ps.PolynomialLibrary(degree=DEGREE), optimizer=opt,
                              differentiation_method=diff)
             try:
@@ -237,12 +358,9 @@ for name in names:
                 print(f"  {method} rt={rt} noise={noise}: fit failed ({e})")
                 continue
             Xi = model.coefficients().T
-            f1, exact = support_metrics(Xi, Xi_true)
             sym_resid = max(np.max(np.abs(M @ Xi - Xi @ g.T)) for g, M in zip(G, M_list)) / max(np.max(np.abs(Xi)), 1e-12)
-            fit_rows.append(dict(system=name, noise=str(noise), method=method, rel_threshold=rt,
-                                 coef_rel_err=np.linalg.norm(Xi - Xi_true) / np.linalg.norm(Xi_true),
-                                 support_f1=f1, exact_support=exact, n_terms=int(np.sum(np.abs(Xi) > 1e-10)),
-                                 n_true_terms=int(np.sum(Xi_true != 0)), sym_resid=sym_resid))
+            fit_rows.append(dict(system=name, noise=str(noise), method=method, rel_threshold=rt, **evaluate(Xi),
+                                 sym_resid=sym_resid))
     print(f"  fits done ({time.time() - t0:.1f}s)")
 
 sym_df = pd.DataFrame(sym_rows)
