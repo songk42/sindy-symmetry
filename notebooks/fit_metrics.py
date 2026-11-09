@@ -14,6 +14,13 @@
                       exceeds VPT_EPS times the attractor's RMS spread; mean over initial conditions, capped at
                       min(VPT_HORIZON Lyapunov times, MAX_SAMPLES samples) = vpt_horizon. Divergent models stop
                       where they blow up.
+  traj_nrmse_clean    trajectory RMSE against the data: simulate the learned model (RK4) from N_TRAJ_IC states of the
+  traj_nrmse_noisy    data for TRAJ_HORIZON Lyapunov times (at most MAX_SAMPLES samples) and compare with the data
+                      samples that follow, RMS over samples, initial conditions and coordinates, divided by the
+                      attractor's RMS spread. "clean": start from and compare with the clean trajectory; "noisy": start
+                      from and compare with the noisy data passed to set_noisy (= clean if none). inf if any forecast
+                      blows up. traj_nrmse_{clean,noisy}_true are the same numbers for Xi_true (the floor: integration
+                      and dt-fit error, plus the noise itself for "noisy").
 """
 import numpy as np
 
@@ -23,6 +30,8 @@ VPT_HORIZON = 10.0  # Lyapunov times
 MAX_SAMPLES = 2000  # ...but never longer than this many data samples (~20 periods); vpt_horizon records the cap
 N_IC = 8
 SUBSTEPS = 4  # RK4 substeps per data sample
+TRAJ_HORIZON = 1.0  # Lyapunov times
+N_TRAJ_IC = 32
 
 
 def poly_eval(X, powers):
@@ -66,17 +75,41 @@ class Evaluator:
         self.n_steps = min(int(np.ceil(VPT_HORIZON * t_lyap / self.h)), MAX_SAMPLES * SUBSTEPS)
         self.horizon = self.n_steps * self.h / t_lyap
         self.ref = self._integrate(Xi_true)
+        # trajectory-RMSE setup: N_TRAJ_IC starts spread over the whole trajectory, n_traj samples ahead of each
+        self.X_clean = X_clean
+        self.n_traj = max(1, min(int(np.ceil(TRAJ_HORIZON * t_lyap / dt)), MAX_SAMPLES, len(X_clean) - 1))
+        self.traj_idx = np.linspace(0, len(X_clean) - 1 - self.n_traj, N_TRAJ_IC).astype(int)
+        self.traj_true = {}
+        self.set_noisy(X_clean)
 
-    def _integrate(self, Xi):
-        """RK4 trajectories from all x0 at once; returns (n_steps + 1, N_IC, n), NaN after blow-up."""
+    def set_noisy(self, X_noisy):
+        """Noisy data (same length as X_clean) that traj_nrmse_noisy compares against."""
+        self.X_noisy = X_noisy
+        self.traj_true = dict(zip(("clean", "noisy"), self.traj_nrmse(self.Xi_true)))
+
+    def traj_nrmse(self, Xi):
+        """(clean, noisy) trajectory NRMSE; both forecasts are integrated together."""
+        k = self.traj_idx[:, None] + np.arange(1, self.n_traj + 1)[None]  # (N_TRAJ_IC, n_traj) sample indices
+        x0 = np.vstack([self.X_clean[self.traj_idx], self.X_noisy[self.traj_idx]])
+        traj = self._integrate(Xi, x0, self.n_traj * SUBSTEPS)[SUBSTEPS::SUBSTEPS]  # (n_traj, 2 N_TRAJ_IC, n)
+        out = []
+        for j, X_ref in enumerate((self.X_clean, self.X_noisy)):
+            err = traj[:, j * N_TRAJ_IC:(j + 1) * N_TRAJ_IC] - X_ref[k].transpose(1, 0, 2)
+            out.append(np.inf if np.isnan(err).any() else float(np.sqrt(np.mean(err ** 2))) / self.spread)
+        return out
+
+    def _integrate(self, Xi, x0=None, n_steps=None):
+        """RK4 trajectories from all x0 at once (default: the VPT starts and horizon); returns (n_steps + 1, n_x0,
+        n), NaN after blow-up."""
         f = lambda x: poly_eval(x, self.powers) @ Xi
-        x = self.x0.copy()
-        out = np.full((self.n_steps + 1,) + x.shape, np.nan)
+        x = (self.x0 if x0 is None else x0).copy()
+        n_steps = self.n_steps if n_steps is None else n_steps
+        out = np.full((n_steps + 1,) + x.shape, np.nan)
         out[0] = x
         alive = np.ones(len(x), bool)
         h = self.h
         with np.errstate(all="ignore"):
-            for k in range(self.n_steps):
+            for k in range(n_steps):
                 k1 = f(x)
                 k2 = f(x + 0.5 * h * k1)
                 k3 = f(x + 0.5 * h * k2)
@@ -97,13 +130,14 @@ class Evaluator:
         first_bad = np.where(~valid.all(axis=0), np.argmin(valid, axis=0), self.n_steps + 1)
         return float(np.mean((first_bad - 1).clip(min=0) * self.h / self.t_lyap))
 
-    def __call__(self, Xi, forecast=True):
+    def __call__(self, Xi, forecast=True, traj=True):
         Xi_true = self.Xi_true
         norm_true = np.linalg.norm(Xi_true)
         f1, exact = _f1(_support(Xi, 0), self.true_abs)
         f1_rel, exact_rel = _f1(_support(Xi, REL_TOL), self.true_rel)
         with np.errstate(all="ignore"):
             vf = np.linalg.norm(self.Theta @ Xi - self.F_true) / np.linalg.norm(self.F_true)
+        clean, noisy = self.traj_nrmse(Xi) if traj else (np.nan, np.nan)
         return dict(
             coef_rel_err=np.linalg.norm(Xi - Xi_true) / norm_true,
             support_f1=f1, exact_support=exact,
@@ -112,6 +146,9 @@ class Evaluator:
             vf_rel_err=vf,
             vpt_lyap=self.vpt(Xi) if forecast else np.nan,
             vpt_horizon=self.horizon,
+            traj_nrmse_clean=clean, traj_nrmse_noisy=noisy,
+            traj_nrmse_clean_true=self.traj_true["clean"], traj_nrmse_noisy_true=self.traj_true["noisy"],
+            traj_horizon_samples=self.n_traj,
             n_terms=int(np.sum(np.abs(Xi) > 1e-10)),
             n_true_terms=int(np.sum(Xi_true != 0)),
         )

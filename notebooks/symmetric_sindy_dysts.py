@@ -213,9 +213,12 @@ for name in names:
         continue
 
     # The CSV time column is a sample index; recover the physical step by regressing dX/dn on f(X).
-    dXdn = np.gradient(X_raw, axis=0)
-    dt = np.sum(dXdn * F_raw) / np.sum(F_raw * F_raw)
-    dt_r2 = 1 - np.sum((dXdn - dt * F_raw) ** 2) / np.sum((dXdn - dXdn.mean(0)) ** 2)
+    # 6th-order centered difference: np.gradient's 2nd order biased dt low by 0.65% on average (up to 2.8%), which
+    # alone pushes RK4 forecasts of the true model off the data within a Lyapunov time
+    dXdn = (-X_raw[:-6] + 9 * X_raw[1:-5] - 45 * X_raw[2:-4] + 45 * X_raw[4:-2] - 9 * X_raw[5:-1] + X_raw[6:]) / 60
+    F_mid = F_raw[3:-3]
+    dt = np.sum(dXdn * F_mid) / np.sum(F_mid * F_mid)
+    dt_r2 = 1 - np.sum((dXdn - dt * F_mid) ** 2) / np.sum((dXdn - dXdn.mean(0)) ** 2)
 
     # Uniform scaling commutes with every signed permutation (same argument as v1).
     s = np.max(np.abs(X_raw))
@@ -271,6 +274,7 @@ for name in names:
         # dysts "fine" data is ~100 samples/period, so 2nd-order FD alone leaves a few-% derivative bias
         exact = noise == "exact_xdot"
         Xn = X if exact else X + noise * X.std(axis=0) * RNG.standard_normal(X.shape)
+        evaluate.set_noisy(Xn)  # trajectory RMSE vs this noise level's data
         X_aug = [Xn] + [Xn @ g.T for g in G]
         t_aug = [t] * len(X_aug)
         xdot = F_raw / s if exact else None

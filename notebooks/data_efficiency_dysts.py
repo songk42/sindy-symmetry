@@ -45,6 +45,9 @@ WINDOWS = [50, 100, 200, 400, 800, 1600, 3200, 6400, 10000]  # samples (~100 per
 N_REPEATS = 5
 NOISE_LEVELS = [0.0, 0.01, 0.05]
 REL_THRESHOLDS = [0.003, 0.01, 0.03, 0.1, 0.3]
+# DE_NOISE=<level>: run one noise level only, into fits_<system>_noise<level>.csv (long-Lyapunov-time systems need
+# ~3 h per level because of the trajectory-RMSE forecasts)
+ONLY_NOISE = float(os.environ["DE_NOISE"]) if os.environ.get("DE_NOISE") else None
 ALPHA_OLD = 0.05
 SR3_NU, SR3_MAX_ITER = 1.0, 500
 METHODS = ["STLSQ_a0.05", "ConstrainedSTLSQ_a0.05", "STLSQ_scaled", "ConstrainedSTLSQ_scaled",
@@ -87,7 +90,12 @@ def run_system(name, side_row):
     period = META.get(name, {}).get("period")
     rows = []
     for k_noise, noise in enumerate(NOISE_LEVELS):
+        if ONLY_NOISE is not None and noise != ONLY_NOISE:  # k_noise (seeds) keeps its full-grid index
+            continue
         diff = ps.FiniteDifference(order=4) if noise == 0.0 else ps.SmoothedFiniteDifference()
+        # trajectory RMSE vs noisy data: the windows are too short for 1-Lyapunov-time forecasts, so compare on the
+        # full trajectory with one fixed noise draw per (system, noise level)
+        evaluate.set_noisy(X + noise * std * np.random.default_rng([zlib.crc32(name.encode()), k_noise]).standard_normal(X.shape))
         for N in WINDOWS:
             for rep in range(N_REPEATS):
                 rng = np.random.default_rng([zlib.crc32(name.encode()), k_noise, N, rep])
@@ -113,7 +121,7 @@ def run_system(name, side_row):
                         rows.append(dict(base, method=method, rel_threshold=rt, **evaluate(Xi, forecast=False),
                                          fit_time=time.time() - tic))
             print(f"{name} noise={noise} N={N} done ({time.time() - t0:.0f}s)", flush=True)
-        pd.DataFrame(rows).to_csv(os.path.join(OUT_DIR, f"fits_{name}.csv"), index=False)
+        pd.DataFrame(rows).to_csv(os.path.join(OUT_DIR, f"fits_{name}" + (f"_noise{ONLY_NOISE:g}" if ONLY_NOISE is not None else "") + ".csv"), index=False)
     return rows
 
 

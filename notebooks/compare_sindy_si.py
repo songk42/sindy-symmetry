@@ -7,6 +7,8 @@
 # Each method is scored at the threshold with the lowest coefficient error (oracle, as before), on the original 4-point
 # grid and on the 5-point grid that adds rel_threshold=0.3 (only run for column-scaled methods). All metrics are then
 # read off that one selected fit; see fit_metrics.py for definitions.
+# SELECT=traj_nrmse_noisy (env) instead picks each method's threshold by trajectory RMSE against the noisy
+# training data, which needs no ground truth (fit_metrics.py).
 
 # %%
 import os
@@ -15,6 +17,7 @@ import numpy as np
 import pandas as pd
 
 LOG_DIR = os.environ.get("LOG_DIR", "/home/songk/sindy-symmetry/logs")
+SELECT = os.environ.get("SELECT", "coef_rel_err")  # threshold-selection metric
 OLD_GRID = [0.003, 0.01, 0.03, 0.1]
 NOISES = ["exact_xdot", "0.0", "0.01", "0.05"]
 RUNS = [("alpha0.05", ""), ("alpha0", "_a0"), ("alpha0.05_norm", "_norm"), ("alpha0_norm", "_a0_norm"),
@@ -50,11 +53,11 @@ allfits["noise"] = allfits["noise"].astype(str)
 systems = sorted(set(new.system))
 allfits = allfits[allfits.system.isin(systems)]
 print(f"{len(systems)} systems; monotone side info certified on {(side.monotone != '[]').sum()}, "
-      f">=1 equilibrium on {(side.n_equilibria > 0).sum()}")
+      f">=1 equilibrium on {(side.n_equilibria > 0).sum()}; thresholds selected by {SELECT}")
 
 
 def best(df):
-    return df.sort_values("coef_rel_err").groupby(["system", "noise", "method"], as_index=False).first()
+    return df.sort_values(SELECT).groupby(["system", "noise", "method"], as_index=False).first()
 
 
 def table(b, value, agg="median", fmt="{:.2f}"):
@@ -98,9 +101,18 @@ for grid, b in grids.items():
     print(table(b, "vpt_lyap"))
     print("\n-- mean VPT as a fraction of each system's horizon")
     print(table(b.assign(vpt_frac=b.vpt_lyap / b.vpt_horizon), "vpt_frac", "mean"))
+    print("\n-- median trajectory NRMSE vs clean data, 1 Lyapunov time (true-model floor: median "
+          f"{b.traj_nrmse_clean_true.median():.2g}, max {b.traj_nrmse_clean_true.max():.2g})")
+    print(table(b, "traj_nrmse_clean", fmt="{:.3g}"))
+    print("\n-- median trajectory NRMSE vs noisy data (true-model floor per noise level: "
+          + ", ".join(f"{nz} {v:.2g}" for nz, v in b.groupby("noise").traj_nrmse_noisy_true.median().items()) + ")")
+    print(table(b, "traj_nrmse_noisy", fmt="{:.3g}"))
+    print("\n-- fraction of systems whose forecast blows up within 1 Lyapunov time")
+    print(table(b.assign(blowup=~np.isfinite(b.traj_nrmse_clean)), "blowup", "mean"))
 
 # %% rank agreement between metrics (4-pt grid, noisy fits): does low coefficient error mean good dynamics?
 b = grids["4-pt grid"]
 b = b[b.noise.isin(["0.01", "0.05"])]
 print("\nSpearman correlation across all (system, noise, method) fits, 1% and 5% noise:")
-print(b[["coef_rel_err", "on_support_err", "support_f1_rel", "vf_rel_err", "vpt_lyap"]].corr("spearman").round(2).to_string())
+print(b[["coef_rel_err", "on_support_err", "support_f1_rel", "vf_rel_err", "vpt_lyap", "traj_nrmse_clean",
+         "traj_nrmse_noisy"]].corr("spearman").round(2).to_string())
