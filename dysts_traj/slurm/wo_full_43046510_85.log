@@ -1,0 +1,12 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('LorenzStenflo', 0.01)]
+  check strong_STLSQ vs alpha0_norm/STLSQ: 2 MISMATCHES
+  check strong_ConstrainedSTLSQ vs alpha0_norm/ConstrainedSTLSQ_noaug: 2 MISMATCHES
+LorenzStenflo noise=0.01: |orbits|=73 true-in-span=0.0e+00 (51s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ         0.142              False       0.284              1.47
+strong_OrbitSTLSQ               0.142              False       0.284              1.47
+strong_STLSQ                    0.142              False       0.284              1.47
+weak_ConstrainedSTLSQ           0.221              False      0.0139            0.0761
+weak_OrbitSTLSQ                 0.221              False      0.0139            0.0761
+weak_STLSQ                      0.221              False      0.0139            0.0761

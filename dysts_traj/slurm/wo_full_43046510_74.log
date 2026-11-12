@@ -1,0 +1,12 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('Laser', 0.05)]
+  check strong_STLSQ vs alpha0_norm/STLSQ: OK
+  check strong_ConstrainedSTLSQ vs alpha0_norm/ConstrainedSTLSQ_noaug: OK
+Laser noise=0.05: |orbits|=30 true-in-span=0.0e+00 (83s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ        0.0213               True      0.0161             0.544
+strong_OrbitSTLSQ              0.0213               True      0.0161             0.544
+strong_STLSQ                   0.0213               True      0.0161             0.544
+weak_ConstrainedSTLSQ         0.00224               True     0.00211            0.0536
+weak_OrbitSTLSQ               0.00224               True     0.00211            0.0536
+weak_STLSQ                    0.00224               True     0.00211            0.0536

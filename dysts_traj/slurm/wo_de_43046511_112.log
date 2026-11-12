@@ -1,0 +1,11 @@
+PanXuZhou noise=0.0 N=50 done (77s)
+PanXuZhou noise=0.0 N=100 done (152s)
+PanXuZhou noise=0.0 N=200 done (229s)
+PanXuZhou noise=0.0 N=400 done (307s)
+PanXuZhou noise=0.0 N=800 done (385s)
+PanXuZhou noise=0.0 N=1600 done (464s)
+PanXuZhou noise=0.0 N=3200 done (543s)
+PanXuZhou noise=0.0 N=6400 done (622s)
+PanXuZhou noise=0.0 N=10000 done (703s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

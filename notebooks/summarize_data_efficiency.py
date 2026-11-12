@@ -23,12 +23,15 @@ LOG_DIR = os.environ.get("LOG_DIR", "/home/songk/sindy-symmetry/logs")
 SELECT = os.environ.get("SELECT", "coef_rel_err")  # threshold-selection metric
 RELIABLE_FRAC = 0.8
 METHODS = ["STLSQ_a0.05", "ConstrainedSTLSQ_a0.05", "STLSQ_scaled", "ConstrainedSTLSQ_scaled",
-           "ConstrainedSR3_l0_scaled", "ConstrainedSR3_v1", "SINDySI_full"]
+           "ConstrainedSR3_l0_scaled", "ConstrainedSR3_v1", "SINDySI_full", "LSQ_dense"]
 PAIRS = [("ConstrainedSTLSQ_a0.05", "STLSQ_a0.05"), ("ConstrainedSTLSQ_scaled", "STLSQ_scaled"),
          ("ConstrainedSTLSQ_scaled", "STLSQ_a0.05"), ("SINDySI_full", "ConstrainedSTLSQ_scaled"),
-         ("ConstrainedSR3_l0_scaled", "ConstrainedSTLSQ_scaled")]
+         ("ConstrainedSR3_l0_scaled", "ConstrainedSTLSQ_scaled"), ("ConstrainedSR3_v1", "LSQ_dense"),
+         ("STLSQ_scaled", "LSQ_dense"), ("ConstrainedSTLSQ_scaled", "LSQ_dense"), ("SINDySI_full", "LSQ_dense")]
+# DE_DIRS=a,b (env): subdirectories of LOG_DIR whose fits_*.csv are pooled (e.g. data_efficiency,data_efficiency_lsq)
+DE_DIRS = os.environ.get("DE_DIRS", "data_efficiency").split(",")
 
-files = sorted(glob.glob(os.path.join(LOG_DIR, "data_efficiency", "fits_*.csv")))
+files = sorted(f for d in DE_DIRS for f in glob.glob(os.path.join(LOG_DIR, d, "fits_*.csv")))
 df = pd.concat([pd.read_csv(f) for f in files])
 best = df.sort_values(SELECT).groupby(["system", "noise", "N", "rep", "method"], as_index=False).first()
 best["structure"] = best.exact_support_rel.astype(bool) & (best.coef_rel_err < 0.1)
@@ -73,14 +76,19 @@ for crit in ["structure", "accuracy", "dynamics", "trajectory"]:
             per = v * periods_per_sample.reindex(v.index)
             rows[m][f"noise {nz:g}"] = f"{np.isfinite(v).sum():2d} / {fmt_n(v.median())} / {fmt_n(per.median()) if np.isfinite(per.median()) else '>max'}"
     print(pd.DataFrame(rows).T.to_string())
-    print("\n-- paired N_min: a needs less / same / more data than b (systems where at least one is reliable)")
+    print("\n-- paired N_min: a needs less / same / more data than b (systems where at least one is reliable);"
+          " geometric-mean ratio a/b (n) on systems where both are reliable")
     rows = {}
     for a, b in PAIRS:
+        if a not in nm.columns or b not in nm.columns:
+            continue
         rows[f"{a} vs {b}"] = {}
         for nz in NOISES:
             x = nm.xs(nz, level="noise")
             x = x[np.isfinite(x[a]) | np.isfinite(x[b])]
-            rows[f"{a} vs {b}"][f"noise {nz:g}"] = f"{(x[a] < x[b]).sum()}/{(x[a] == x[b]).sum()}/{(x[a] > x[b]).sum()}"
+            both = x[np.isfinite(x[a]) & np.isfinite(x[b])]
+            gm = np.exp(np.mean(np.log(both[a] / both[b]))) if len(both) else np.nan
+            rows[f"{a} vs {b}"][f"noise {nz:g}"] = f"{(x[a] < x[b]).sum()}/{(x[a] == x[b]).sum()}/{(x[a] > x[b]).sum()}, x{gm:.2f} (n={len(both)})"
     print(pd.DataFrame(rows).T.to_string())
     print()
 

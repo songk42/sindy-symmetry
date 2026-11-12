@@ -1,0 +1,10 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('PanXuZhou', 0.1)]
+PanXuZhou noise=0.1: |orbits|=30 true-in-span=0.0e+00 (54s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ        0.0108               True      0.0108            0.0725
+strong_OrbitSTLSQ              0.0108               True      0.0108            0.0725
+strong_STLSQ                    0.317              False       0.424              1.39
+weak_ConstrainedSTLSQ         0.00199               True     0.00247            0.0111
+weak_OrbitSTLSQ                 0.317              False       0.424              1.39
+weak_STLSQ                       2.28              False      0.0316             0.479

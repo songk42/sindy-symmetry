@@ -1,0 +1,6 @@
+/home/songk/sindy-symmetry/.venv/lib/python3.11/site-packages/dysts/base.py:31: UserWarning: Numba not installed. Falling back to no JIT compilation.
+  warnings.warn("Numba not installed. Falling back to no JIT compilation.")
+{'system': 'SprottC', 'dim': 3, 'cond_mono': np.float64(43.030439900248446), 'cond_leg': np.float64(1566.4922647938974), 'nnz_mono': 5, 'nnz_leg': 5, 'basis_err': np.float64(5.551115123125783e-16), 'C_resid_mono': np.float64(0.0), 'C_resid_leg': np.float64(0.0)}
+SprottC noise=0.0 done (2s)
+SprottC noise=0.01 done (3s)
+SprottC noise=0.05 done (5s)

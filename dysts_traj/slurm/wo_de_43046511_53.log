@@ -1,0 +1,11 @@
+HyperPang noise=0.01 N=50 done (86s)
+HyperPang noise=0.01 N=100 done (181s)
+HyperPang noise=0.01 N=200 done (278s)
+HyperPang noise=0.01 N=400 done (377s)
+HyperPang noise=0.01 N=800 done (476s)
+HyperPang noise=0.01 N=1600 done (574s)
+HyperPang noise=0.01 N=3200 done (674s)
+HyperPang noise=0.01 N=6400 done (772s)
+HyperPang noise=0.01 N=10000 done (860s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

@@ -1,0 +1,6 @@
+/home/songk/sindy-symmetry/.venv/lib/python3.11/site-packages/dysts/base.py:31: UserWarning: Numba not installed. Falling back to no JIT compilation.
+  warnings.warn("Numba not installed. Falling back to no JIT compilation.")
+{'system': 'LuChen', 'dim': 3, 'cond_mono': np.float64(4421.894028872997), 'cond_leg': np.float64(12334.99814358049), 'nnz_mono': 6, 'nnz_leg': 6, 'basis_err': np.float64(6.661338147750939e-16), 'C_resid_mono': np.float64(0.0), 'C_resid_leg': np.float64(0.0)}
+LuChen noise=0.0 done (3s)
+LuChen noise=0.01 done (5s)
+LuChen noise=0.05 done (7s)

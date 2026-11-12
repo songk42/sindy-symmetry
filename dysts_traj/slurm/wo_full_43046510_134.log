@@ -1,0 +1,12 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('RikitakeDynamo', 0.05)]
+  check strong_STLSQ vs alpha0_norm/STLSQ: OK
+  check strong_ConstrainedSTLSQ vs alpha0_norm/ConstrainedSTLSQ_noaug: OK
+RikitakeDynamo noise=0.05: |orbits|=30 true-in-span=0.0e+00 (56s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ        0.0125               True      0.0102             0.184
+strong_OrbitSTLSQ              0.0125               True      0.0102             0.184
+strong_STLSQ                   0.0125               True      0.0102             0.184
+weak_ConstrainedSTLSQ         0.00171               True     0.00132            0.0916
+weak_OrbitSTLSQ               0.00171               True     0.00132            0.0916
+weak_STLSQ                    0.00171               True     0.00132            0.0916

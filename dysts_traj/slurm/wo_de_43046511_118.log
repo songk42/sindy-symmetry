@@ -1,0 +1,11 @@
+PehlivanWei noise=0.05 N=50 done (140s)
+PehlivanWei noise=0.05 N=100 done (286s)
+PehlivanWei noise=0.05 N=200 done (462s)
+PehlivanWei noise=0.05 N=400 done (662s)
+PehlivanWei noise=0.05 N=800 done (863s)
+PehlivanWei noise=0.05 N=1600 done (1067s)
+PehlivanWei noise=0.05 N=3200 done (1269s)
+PehlivanWei noise=0.05 N=6400 done (1472s)
+PehlivanWei noise=0.05 N=10000 done (1676s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

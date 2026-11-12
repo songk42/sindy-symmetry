@@ -1,0 +1,12 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('Sakarya', 0.0)]
+  check strong_STLSQ vs alpha0_norm/STLSQ: OK
+  check strong_ConstrainedSTLSQ vs alpha0_norm/ConstrainedSTLSQ_noaug: OK
+Sakarya noise=0.0: |orbits|=30 true-in-span=0.0e+00 (28s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ       0.00403               True     0.00248           0.00632
+strong_OrbitSTLSQ             0.00403               True     0.00248           0.00632
+strong_STLSQ                  0.00403               True     0.00248           0.00632
+weak_ConstrainedSTLSQ        0.000407               True    0.000406          9.01e-07
+weak_OrbitSTLSQ              0.000407               True    0.000406          9.01e-07
+weak_STLSQ                   0.000407               True    0.000406          9.01e-07

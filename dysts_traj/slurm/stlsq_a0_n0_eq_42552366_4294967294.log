@@ -1,0 +1,598 @@
+Aizawa: no signed-permutation symmetry (0.2s)
+AnishchenkoAstakhov: no signed-permutation symmetry (0.1s)
+Arneodo: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 24 equality rows (C@Xi_true=7.5e-40), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (72.6s)
+ArnoldBeltramiChildress: no signed-permutation symmetry (0.1s)
+AtmosphericRegime: |G|=1 poly=True dt_r2=0.224973 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+BeerRNN: no signed-permutation symmetry (0.2s)
+BelousovZhabotinsky: no signed-permutation symmetry (0.2s)
+Blasius: no signed-permutation symmetry (0.0s)
+Bouali: no signed-permutation symmetry (0.1s)
+Bouali2: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 31 equality rows (C@Xi_true=0.0e+00), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (132.8s)
+BurkeShaw: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 33 equality rows (C@Xi_true=4.7e-15), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (33.6s)
+CaTwoPlus: no signed-permutation symmetry (0.2s)
+CaTwoPlusQuasiperiodic: no signed-permutation symmetry (0.2s)
+CellularNeuralNetwork: |G|=1 poly=False dt_r2=0.999989 Mk_resid=0.0e+00 C@Xi_true=nan
+Chen: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 34 equality rows (C@Xi_true=1.6e-14), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (39.7s)
+ChenLee: |G|=3 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 48 equality rows (C@Xi_true=2.9e-15), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (89.9s)
+Chua: |G|=1 poly=False dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=nan
+CoevolvingPredatorPrey: no signed-permutation symmetry (0.2s)
+Colpitts: no signed-permutation symmetry (0.1s)
+Coullet: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 24 equality rows (C@Xi_true=1.4e-15), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (69.2s)
+Dadras: no signed-permutation symmetry (0.1s)
+DequanLi: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 31 equality rows (C@Xi_true=0.0e+00), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (310.7s)
+DoublePendulum: |G|=1 poly=False dt_r2=0.536093 Mk_resid=0.0e+00 C@Xi_true=nan
+ExcitableCell: no signed-permutation symmetry (0.3s)
+Finance: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 33 equality rows (C@Xi_true=3.5e-15), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (59.8s)
+GenesioTesi: no signed-permutation symmetry (0.2s)
+GuckenheimerHolmes: no signed-permutation symmetry (0.1s)
+Hadley: no signed-permutation symmetry (0.1s)
+Halvorsen: |G|=2 poly=True dt_r2=1.000000 Mk_resid=1.1e-16 C@Xi_true=2.6e-15
+  side info eq: 42 equality rows (C@Xi_true=4.0e-14), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (65.1s)
+HastingsPowell: no signed-permutation symmetry (0.1s)
+HenonHeiles: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 72 equality rows (C@Xi_true=0.0e+00), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (284.8s)
+HyperBao: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 68 equality rows (C@Xi_true=0.0e+00), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (155.4s)
+HyperCai: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 68 equality rows (C@Xi_true=0.0e+00), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (85.5s)
+HyperLorenz: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 68 equality rows (C@Xi_true=0.0e+00), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (164.0s)
+HyperPang: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 68 equality rows (C@Xi_true=0.0e+00), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (67.0s)
+HyperQi: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 72 equality rows (C@Xi_true=0.0e+00), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (119.7s)
+HyperRossler: no signed-permutation symmetry (0.1s)
+HyperWang: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 68 equality rows (C@Xi_true=0.0e+00), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (96.4s)
+HyperXu: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 68 equality rows (C@Xi_true=0.0e+00), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (101.4s)
+HyperYan: no signed-permutation symmetry (0.1s)
+HyperYangChen: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 68 equality rows (C@Xi_true=0.0e+00), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (174.2s)
+IsothermalChemical: no signed-permutation symmetry (0.1s)
+ItikBanksTumor: no signed-permutation symmetry (0.3s)
+JerkCircuit: no signed-permutation symmetry (0.1s)
+Laser: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 34 equality rows (C@Xi_true=8.4e-15), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (106.2s)
+LiuChen: |G|=3 poly=True dt_r2=0.827318 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+Lorenz: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 34 equality rows (C@Xi_true=5.8e-15), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (35.0s)
+Lorenz96: |G|=3 poly=True dt_r2=1.000000 Mk_resid=5.6e-17 C@Xi_true=1.3e-15
+  side info eq: 113 equality rows (C@Xi_true=2.5e-14), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (35.0s)
+LorenzBounded: |G|=1 poly=False dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=nan
+LorenzStenflo: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 72 equality rows (C@Xi_true=6.7e-15), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (54.1s)
+LuChen: |G|=1 poly=True dt_r2=0.999997 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 34 equality rows (C@Xi_true=2.2e-14), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (58.7s)
+LuChenCheng: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 34 equality rows (C@Xi_true=7.5e-15), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (105.7s)
+MooreSpiegel: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 21 equality rows (C@Xi_true=0.0e+00), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (57.2s)
+MultiChua: |G|=1 poly=False dt_r2=0.999997 Mk_resid=0.0e+00 C@Xi_true=nan
+NewtonLiepnik: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 37 equality rows (C@Xi_true=8.3e-16), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (36.7s)
+NoseHoover: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 30 equality rows (C@Xi_true=0.0e+00), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (407.1s)
+NuclearQuadrupole: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 72 equality rows (C@Xi_true=0.0e+00), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (58.6s)
+PanXuZhou: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 34 equality rows (C@Xi_true=1.5e-14), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (57.8s)
+PehlivanWei: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 33 equality rows (C@Xi_true=2.2e-16), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (130.4s)
+Qi: |G|=3 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 96 equality rows (C@Xi_true=7.7e-13), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (77.9s)
+QiChen: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 34 equality rows (C@Xi_true=1.2e-13), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (31.7s)
+RayleighBenard: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 34 equality rows (C@Xi_true=2.8e-14), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (28.5s)
+RikitakeDynamo: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 33 equality rows (C@Xi_true=3.7e-15), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (61.4s)
+Rossler: no signed-permutation symmetry (0.1s)
+Rucklidge: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 34 equality rows (C@Xi_true=2.0e-15), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (40.6s)
+Sakarya: |G|=1 poly=True dt_r2=0.999981 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 37 equality rows (C@Xi_true=1.2e-15), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (40.4s)
+SaltonSea: no signed-permutation symmetry (0.1s)
+SanUmSrisuchinwong: |G|=1 poly=False dt_r2=0.999997 Mk_resid=0.0e+00 C@Xi_true=nan
+ShimizuMorioka: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 34 equality rows (C@Xi_true=2.8e-16), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (95.4s)
+SprottA: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 30 equality rows (C@Xi_true=0.0e+00), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (303.1s)
+SprottB: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 33 equality rows (C@Xi_true=5.6e-17), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (26.2s)
+SprottC: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 33 equality rows (C@Xi_true=8.3e-17), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (40.3s)
+SprottF: no signed-permutation symmetry (0.1s)
+SprottG: no signed-permutation symmetry (0.1s)
+SprottH: no signed-permutation symmetry (0.1s)
+SprottI: no signed-permutation symmetry (0.1s)
+SprottJ: no signed-permutation symmetry (0.1s)
+SprottJerk: no signed-permutation symmetry (0.1s)
+SprottK: no signed-permutation symmetry (0.1s)
+SprottL: no signed-permutation symmetry (0.1s)
+SprottM: no signed-permutation symmetry (0.1s)
+SprottMore: |G|=1 poly=False dt_r2=0.999421 Mk_resid=0.0e+00 C@Xi_true=nan
+SprottR: no signed-permutation symmetry (0.0s)
+SprottS: no signed-permutation symmetry (0.1s)
+SprottTorus: no signed-permutation symmetry (0.1s)
+SwingingAtwood: |G|=1 poly=False dt_r2=0.683892 Mk_resid=0.0e+00 C@Xi_true=nan
+Thomas: |G|=5 poly=False dt_r2=0.999998 Mk_resid=1.1e-16 C@Xi_true=nan
+ThomasLabyrinth: |G|=5 poly=False dt_r2=0.999986 Mk_resid=1.1e-16 C@Xi_true=nan
+Torus: |G|=1 poly=True dt_r2=-0.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+Tsucs2: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 31 equality rows (C@Xi_true=0.0e+00), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (369.1s)
+VallisElNino: |G|=1 poly=True dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=0.0e+00
+  side info eq: 34 equality rows (C@Xi_true=1.6e-14), 0 inequality rows (max violation by Xi_true 0.0e+00)
+  fits done (42.6s)
+WindmiReduced: no signed-permutation symmetry (0.1s)
+YuWang: |G|=1 poly=False dt_r2=0.980266 Mk_resid=0.0e+00 C@Xi_true=nan
+YuWang2: |G|=1 poly=False dt_r2=1.000000 Mk_resid=0.0e+00 C@Xi_true=nan
+
+=== Systems with symmetries ===
+               system  dim  n_sym       dt         dt_r2   poly_resid  is_poly  n_constraints     Mk_resid  true_constraint_resid
+              Arneodo    3      1 0.031644  1.000000e+00 7.793647e-15     True           21.0 0.000000e+00           0.000000e+00
+    AtmosphericRegime    3      1 0.243463  2.249726e-01 1.778650e-15     True           27.0 0.000000e+00           0.000000e+00
+              Bouali2    3      1 0.026782  1.000000e+00 6.331818e-15     True           30.0 0.000000e+00           0.000000e+00
+            BurkeShaw    3      1 0.007834  1.000000e+00 5.948195e-15     True           30.0 0.000000e+00           0.000000e+00
+CellularNeuralNetwork    3      1 0.032002  9.999889e-01 1.016202e-01    False           21.0 0.000000e+00                    NaN
+                 Chen    3      1 0.005869  1.000000e+00 3.732559e-15     True           30.0 0.000000e+00           0.000000e+00
+              ChenLee    3      3 0.028045  9.999999e-01 8.998290e-15     True           45.0 0.000000e+00           0.000000e+00
+                 Chua    3      1 0.014236  9.999997e-01 3.513990e-02    False           21.0 0.000000e+00                    NaN
+              Coullet    3      1 0.057669  1.000000e+00 3.809119e-15     True           21.0 0.000000e+00           0.000000e+00
+             DequanLi    3      1 0.000838  1.000000e+00 1.743713e-15     True           30.0 0.000000e+00           0.000000e+00
+       DoublePendulum    4      1 0.042675  5.360934e-01 3.702782e-01    False           44.0 0.000000e+00                    NaN
+              Finance    3      1 0.098941  1.000000e+00 7.947628e-15     True           30.0 0.000000e+00           0.000000e+00
+            Halvorsen    3      2 0.014890  1.000000e+00 1.229837e-14     True           40.0 1.110223e-16           2.567315e-15
+          HenonHeiles    4      1 0.063706  1.000000e+00 1.513358e-15     True           70.0 0.000000e+00           0.000000e+00
+             HyperBao    4      1 0.005832  1.000000e+00 4.216251e-15     True           67.0 0.000000e+00           0.000000e+00
+             HyperCai    4      1 0.006115  1.000000e+00 9.077905e-15     True           67.0 0.000000e+00           0.000000e+00
+          HyperLorenz    4      1 0.012777  1.000000e+00 2.615757e-14     True           67.0 0.000000e+00           0.000000e+00
+            HyperPang    4      1 0.008440  1.000000e+00 3.592596e-15     True           67.0 0.000000e+00           0.000000e+00
+              HyperQi    4      1 0.000619  1.000000e+00 2.590838e-15     True           70.0 0.000000e+00           0.000000e+00
+            HyperWang    4      1 0.006482  1.000000e+00 6.557162e-14     True           67.0 0.000000e+00           0.000000e+00
+              HyperXu    4      1 0.011329  1.000000e+00 9.831778e-14     True           67.0 0.000000e+00           0.000000e+00
+        HyperYangChen    4      1 0.009128  1.000000e+00 7.817510e-15     True           67.0 0.000000e+00           0.000000e+00
+                Laser    3      1 0.009468  1.000000e+00 4.859558e-15     True           30.0 0.000000e+00           0.000000e+00
+              LiuChen    3      3 0.063446  8.273177e-01 3.821357e-15     True           45.0 0.000000e+00           0.000000e+00
+               Lorenz    3      1 0.015009  1.000000e+00 4.590037e-15     True           30.0 0.000000e+00           0.000000e+00
+             Lorenz96    4      3 0.021970  9.999998e-01 2.371046e-15     True          105.0 5.551115e-17           1.316395e-15
+        LorenzBounded    3      1 0.013717  1.000000e+00 1.994165e-02    False           30.0 0.000000e+00                    NaN
+        LorenzStenflo    4      1 0.038881  1.000000e+00 9.275245e-15     True           67.0 0.000000e+00           0.000000e+00
+               LuChen    3      1 0.023381  9.999971e-01 5.678905e-15     True           30.0 0.000000e+00           0.000000e+00
+          LuChenCheng    3      1 0.009234  1.000000e+00 5.518778e-15     True           30.0 0.000000e+00           0.000000e+00
+         MooreSpiegel    3      1 0.012888  1.000000e+00 1.134428e-14     True           21.0 0.000000e+00           0.000000e+00
+            MultiChua    3      1 0.022588  9.999970e-01 1.050320e-01    False           21.0 0.000000e+00                    NaN
+        NewtonLiepnik    3      1 0.085103  1.000000e+00 9.812979e-15     True           30.0 0.000000e+00           0.000000e+00
+           NoseHoover    3      1 0.058678  1.000000e+00 4.103016e-15     True           30.0 0.000000e+00           0.000000e+00
+    NuclearQuadrupole    4      1 0.060237  1.000000e+00 6.537781e-15     True           70.0 0.000000e+00           0.000000e+00
+            PanXuZhou    3      1 0.017831  1.000000e+00 1.318085e-14     True           30.0 0.000000e+00           0.000000e+00
+          PehlivanWei    3      1 0.037491  1.000000e+00 1.235795e-15     True           30.0 0.000000e+00           0.000000e+00
+                   Qi    4      3 0.004082  1.000000e+00 6.123840e-15     True           92.0 0.000000e+00           0.000000e+00
+               QiChen    3      1 0.003918  1.000000e+00 3.727909e-15     True           30.0 0.000000e+00           0.000000e+00
+       RayleighBenard    3      1 0.009198  1.000000e+00 7.268001e-15     True           30.0 0.000000e+00           0.000000e+00
+       RikitakeDynamo    3      1 0.058981  1.000000e+00 4.330606e-15     True           30.0 0.000000e+00           0.000000e+00
+            Rucklidge    3      1 0.060727  1.000000e+00 4.554251e-15     True           30.0 0.000000e+00           0.000000e+00
+              Sakarya    3      1 0.049829  9.999809e-01 7.057775e-15     True           30.0 0.000000e+00           0.000000e+00
+   SanUmSrisuchinwong    3      1 0.074661  9.999972e-01 1.007809e-01    False           30.0 0.000000e+00                    NaN
+       ShimizuMorioka    3      1 0.120392  1.000000e+00 2.964357e-15     True           30.0 0.000000e+00           0.000000e+00
+              SprottA    3      1 0.063735  1.000000e+00 4.382067e-15     True           30.0 0.000000e+00           0.000000e+00
+              SprottB    3      1 0.110511  1.000000e+00 7.469613e-15     True           30.0 0.000000e+00           0.000000e+00
+              SprottC    3      1 0.088861  1.000000e+00 2.879238e-15     True           30.0 0.000000e+00           0.000000e+00
+           SprottMore    3      1 0.000999  9.994213e-01 3.210646e-01    False           30.0 0.000000e+00                    NaN
+       SwingingAtwood    4      1 0.002302  6.838920e-01 6.570785e-01    False           70.0 0.000000e+00                    NaN
+               Thomas    3      5 0.049689  9.999982e-01 2.084919e-01    False           47.0 1.110223e-16                    NaN
+      ThomasLabyrinth    3      5 0.060481  9.999861e-01 9.900079e-01    False           47.0 1.110223e-16                    NaN
+                Torus    3      1 0.000003 -2.053301e-08 2.322948e-15     True           27.0 0.000000e+00           0.000000e+00
+               Tsucs2    3      1 0.003453  1.000000e+00 1.609162e-15     True           30.0 0.000000e+00           0.000000e+00
+         VallisElNino    3      1 0.022089  1.000000e+00 8.494295e-15     True           30.0 0.000000e+00           0.000000e+00
+               YuWang    3      1 0.012903  9.802663e-01 4.795942e-01    False           30.0 0.000000e+00                    NaN
+              YuWang2    3      1 0.003927  9.999998e-01 2.075416e-01    False           30.0 0.000000e+00                    NaN
+
+=== Best-threshold coefficient error per system ===
+method                        ConstrainedSR3_v1_noaug  ConstrainedSTLSQ_noaug  EquivC_cc
+system            noise                                                                 
+Arneodo           0.0                        6.06e-06                8.12e-06   8.12e-06
+                  0.01                       4.77e-03                2.66e-03   2.66e-03
+                  0.05                       5.93e-02                2.08e-02   2.08e-02
+                  exact_xdot                 5.47e-15                3.94e-15   1.80e-16
+Bouali2           0.0                        8.63e-02                2.69e-04   2.69e-04
+                  0.01                       5.01e+00                1.56e+00   1.56e+00
+                  0.05                       9.62e+00                3.84e+00   3.84e+00
+                  exact_xdot                 6.80e-14                2.64e-04   2.64e-04
+BurkeShaw         0.0                        3.06e-03                1.05e-04   1.05e-04
+                  0.01                       1.47e-01                1.30e-01   1.25e-01
+                  0.05                       1.51e-01                1.56e-01   1.45e-01
+                  exact_xdot                 1.95e-14                8.36e-14   3.08e-16
+Chen              0.0                        4.96e-03                3.62e-05   4.87e-05
+                  0.01                       2.65e-01                1.03e-01   1.07e-01
+                  0.05                       2.30e+00                1.39e+00   1.34e+00
+                  exact_xdot                 3.70e-14                5.30e-14   1.13e-15
+ChenLee           0.0                        1.97e-03                4.21e-04   4.21e-04
+                  0.01                       9.51e-02                8.17e-02   4.02e-02
+                  0.05                       9.20e-02                7.80e-02   4.08e-02
+                  exact_xdot                 2.27e-14                3.76e-15   2.14e-15
+Coullet           0.0                        1.65e-05                6.23e-06   6.23e-06
+                  0.01                       1.21e-02                2.71e-03   2.71e-03
+                  0.05                       7.10e-02                4.76e-03   4.76e-03
+                  exact_xdot                 3.40e-13                6.68e-15   1.01e-15
+DequanLi          0.0                        4.93e-05                5.79e-06   5.79e-06
+                  0.01                       8.54e-03                6.31e-03   6.31e-03
+                  0.05                       1.59e-02                1.34e-02   1.34e-02
+                  exact_xdot                 5.18e-14                3.98e-15   1.03e-15
+Finance           0.0                        1.66e-01                1.57e-01   1.57e-01
+                  0.01                       4.93e+00                4.96e+00   4.94e+00
+                  0.05                       5.48e+00                5.58e+00   5.58e+00
+                  exact_xdot                 3.14e-14                1.44e-14   1.97e-15
+Halvorsen         0.0                        6.95e-04                5.60e-05   5.60e-05
+                  0.01                       5.07e-02                6.85e-03   7.01e-03
+                  0.05                       3.96e-02                7.55e-03   7.58e-03
+                  exact_xdot                 1.77e-13                3.00e-14   1.68e-15
+HenonHeiles       0.0                        7.32e-06                3.60e-06   3.60e-06
+                  0.01                       1.17e-02                1.53e-03   1.53e-03
+                  0.05                       8.02e-02                2.48e-03   2.48e-03
+                  exact_xdot                 2.09e-13                2.43e-15   1.13e-15
+HyperBao          0.0                        4.23e-02                1.53e-05   1.53e-05
+                  0.01                       7.73e+00                7.11e+01   7.11e+01
+                  0.05                       8.42e+01                1.34e+02   1.34e+02
+                  exact_xdot                 4.36e-13                1.12e-14   9.47e-15
+HyperCai          0.0                        2.60e-03                3.45e-05   3.45e-05
+                  0.01                       2.47e-01                1.38e-01   1.38e-01
+                  0.05                       2.77e+00                2.18e+00   2.26e+00
+                  exact_xdot                 3.51e-14                1.54e-14   1.69e-15
+HyperLorenz       0.0                        1.15e-01                1.80e-02   1.80e-02
+                  0.01                       3.52e+00                2.04e+01   2.04e+01
+                  0.05                       8.46e+00                1.06e+01   1.06e+01
+                  exact_xdot                 1.30e-13                2.99e-14   2.95e-14
+HyperPang         0.0                        3.80e-02                5.12e-05   5.12e-05
+                  0.01                       1.25e+00                1.02e+00   1.02e+00
+                  0.05                       1.83e+01                1.53e+01   1.53e+01
+                  exact_xdot                 6.88e-14                3.96e-15   1.23e-15
+HyperQi           0.0                        4.62e-03                3.43e-03   3.43e-03
+                  0.01                       2.33e-01                2.15e-01   2.15e-01
+                  0.05                       2.65e-01                2.46e-01   2.46e-01
+                  exact_xdot                 3.60e-15                2.21e-15   1.35e-15
+HyperWang         0.0                        7.06e-04                4.31e-03   4.31e-03
+                  0.01                       1.07e-01                4.83e-01   4.83e-01
+                  0.05                       4.02e-01                8.48e-01   8.48e-01
+                  exact_xdot                 8.53e-14                4.31e-03   4.31e-03
+HyperXu           0.0                        3.14e-02                1.09e-02   1.09e-02
+                  0.01                       9.37e-01                2.13e+00   2.13e+00
+                  0.05                       2.33e+00                9.04e-01   9.04e-01
+                  exact_xdot                 1.49e-13                9.47e-03   9.47e-03
+HyperYangChen     0.0                        1.28e-01                4.83e-02   4.83e-02
+                  0.01                       5.98e+00                4.40e+01   4.40e+01
+                  0.05                       2.38e+01                1.27e+01   1.27e+01
+                  exact_xdot                 3.09e-14                9.29e-15   6.68e-15
+Laser             0.0                        3.98e-02                2.91e-04   3.10e-04
+                  0.01                       9.96e-01                5.26e-01   5.13e-01
+                  0.05                       8.58e-01                5.93e-01   5.86e-01
+                  exact_xdot                 6.60e-14                2.70e-14   1.28e-15
+Lorenz            0.0                        4.37e-02                2.12e-04   2.61e-04
+                  0.01                       1.21e+00                9.22e-01   9.04e-01
+                  0.05                       2.79e+00                2.44e+00   2.43e+00
+                  exact_xdot                 6.29e-14                7.30e-15   1.11e-15
+Lorenz96          0.0                        6.53e-03                8.01e-04   8.00e-04
+                  0.01                       1.94e-01                2.36e-02   1.07e-01
+                  0.05                       1.97e-01                2.57e-02   1.36e-01
+                  exact_xdot                 8.56e-15                2.97e-14   9.13e-16
+LorenzStenflo     0.0                        2.91e-01                2.97e-01   2.96e-01
+                  0.01                       2.79e+01                2.59e+01   2.65e+01
+                  0.05                       3.02e+01                5.73e+01   5.70e+01
+                  exact_xdot                 2.63e-13                6.55e-14   2.93e-15
+LuChen            0.0                        1.66e+00                6.43e-01   6.64e-01
+                  0.01                       3.07e+01                4.96e+01   5.25e+01
+                  0.05                       6.85e+01                8.58e+01   5.09e+01
+                  exact_xdot                 1.55e-13                5.14e-14   3.09e-15
+LuChenCheng       0.0                        3.57e-03                8.47e-05   8.48e-05
+                  0.01                       2.46e-01                1.43e-01   3.82e-02
+                  0.05                       3.09e-01                2.47e-01   3.86e-02
+                  exact_xdot                 1.53e-13                3.83e-14   1.38e-15
+MooreSpiegel      0.0                        3.28e-04                2.51e-01   2.51e-01
+                  0.01                       4.12e-02                2.81e-01   2.81e-01
+                  0.05                       1.42e-01                2.82e-01   2.82e-01
+                  exact_xdot                 1.00e-13                2.50e-01   2.50e-01
+NewtonLiepnik     0.0                        1.23e-02                1.72e-04   7.46e-04
+                  0.01                       5.08e-01                4.97e-01   5.03e-01
+                  0.05                       4.04e-01                3.75e-01   3.83e-01
+                  exact_xdot                 1.33e-14                5.79e-14   9.11e-16
+NoseHoover        0.0                        8.34e-04                2.05e-04   2.05e-04
+                  0.01                       4.71e-02                4.70e-02   4.70e-02
+                  0.05                       4.47e-02                4.45e-02   4.45e-02
+                  exact_xdot                 1.32e-14                1.17e-15   6.47e-16
+NuclearQuadrupole 0.0                        7.05e-05                3.96e-05   3.96e-05
+                  0.01                       9.41e-03                7.80e-03   7.80e-03
+                  0.05                       2.48e-02                1.55e-02   1.55e-02
+                  exact_xdot                 8.60e-15                5.40e-15   1.68e-15
+PanXuZhou         0.0                        3.80e-02                6.51e-05   6.59e-05
+                  0.01                       1.73e+00                1.20e+00   1.20e+00
+                  0.05                       3.98e+00                4.28e+00   4.28e+00
+                  exact_xdot                 5.29e-14                1.01e-14   2.49e-15
+PehlivanWei       0.0                        2.07e-03                1.06e-04   1.68e-04
+                  0.01                       1.14e-01                1.02e-01   1.05e-01
+                  0.05                       1.22e-01                1.08e-01   1.11e-01
+                  exact_xdot                 5.71e-14                4.71e-14   1.01e-15
+Qi                0.0                        6.42e-02                1.59e-04   1.87e-04
+                  0.01                       4.77e+00                1.00e+00   8.64e-01
+                  0.05                       6.35e+00                2.92e+00   2.71e+00
+                  exact_xdot                 5.24e-14                1.26e-14   7.96e-15
+QiChen            0.0                        4.71e-02                2.34e-02   2.33e-02
+                  0.01                       1.23e+00                1.09e+00   1.11e+00
+                  0.05                       1.59e+00                1.40e+00   1.42e+00
+                  exact_xdot                 9.09e-14                1.17e-14   1.81e-15
+RayleighBenard    0.0                        4.41e-02                8.60e-05   8.59e-05
+                  0.01                       8.57e-01                7.16e-01   7.22e-01
+                  0.05                       1.19e+01                1.06e+01   1.14e+01
+                  exact_xdot                 1.36e-13                4.03e-14   3.36e-15
+RikitakeDynamo    0.0                        1.86e-02                9.98e-05   1.02e-04
+                  0.01                       9.85e-01                7.52e-01   8.58e-01
+                  0.05                       7.69e-01                6.63e-01   6.92e-01
+                  exact_xdot                 1.48e-13                3.53e-14   1.61e-15
+Rucklidge         0.0                        1.27e-03                6.77e-05   8.56e-05
+                  0.01                       8.27e-02                7.55e-02   7.94e-02
+                  0.05                       1.83e-01                2.75e-02   1.29e-02
+                  exact_xdot                 3.24e-14                3.35e-15   9.68e-16
+Sakarya           0.0                        3.40e-02                1.71e-02   1.96e-02
+                  0.01                       8.40e-01                8.59e-01   8.60e-01
+                  0.05                       8.35e-01                8.52e-01   8.53e-01
+                  exact_xdot                 2.64e-15                3.01e-14   4.79e-16
+ShimizuMorioka    0.0                        1.42e-03                2.57e-05   3.40e-05
+                  0.01                       9.23e-02                4.66e-03   5.84e-03
+                  0.05                       5.23e-01                3.51e-01   3.62e-01
+                  exact_xdot                 8.69e-14                9.04e-14   5.28e-16
+SprottA           0.0                        5.58e-04                1.08e-04   1.08e-04
+                  0.01                       3.65e-02                9.89e-03   9.89e-03
+                  0.05                       3.45e-02                1.12e-02   1.12e-02
+                  exact_xdot                 4.21e-14                8.56e-16   1.17e-15
+SprottB           0.0                        8.27e-03                2.95e-04   2.95e-04
+                  0.01                       2.85e-01                1.66e-01   2.17e-01
+                  0.05                       3.04e-01                1.52e-01   1.95e-01
+                  exact_xdot                 1.05e-13                2.57e-14   6.01e-16
+SprottC           0.0                        5.82e-03                9.46e-05   9.46e-05
+                  0.01                       3.31e-01                3.74e-01   3.70e-01
+                  0.05                       6.85e-01                5.65e-01   5.57e-01
+                  exact_xdot                 7.47e-15                2.48e-15   1.67e-15
+Tsucs2            0.0                        2.07e-03                2.08e-04   2.08e-04
+                  0.01                       1.05e-01                2.03e-02   2.03e-02
+                  0.05                       1.12e-01                2.15e-02   2.15e-02
+                  exact_xdot                 9.83e-14                1.89e-15   1.04e-15
+VallisElNino      0.0                        2.36e-01                3.79e+01   5.72e+00
+                  0.01                       8.64e+00                1.28e+02   2.39e+01
+                  0.05                       4.72e+01                5.63e+02   4.36e+02
+                  exact_xdot                 2.46e-14                1.23e-01   3.66e-02
+
+=== Best-threshold exact support recovery per system ===
+method                        ConstrainedSR3_v1_noaug  ConstrainedSTLSQ_noaug  EquivC_cc
+system            noise                                                                 
+Arneodo           0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     1.0        1.0
+                  0.05                            0.0                     1.0        1.0
+                  exact_xdot                      1.0                     1.0        1.0
+Bouali2           0.0                             0.0                     0.0        0.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     0.0        0.0
+BurkeShaw         0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+Chen              0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+ChenLee           0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+Coullet           0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     1.0        1.0
+                  0.05                            0.0                     1.0        1.0
+                  exact_xdot                      1.0                     1.0        1.0
+DequanLi          0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+Finance           0.0                             0.0                     0.0        0.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+Halvorsen         0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     1.0        1.0
+                  0.05                            0.0                     1.0        1.0
+                  exact_xdot                      1.0                     1.0        1.0
+HenonHeiles       0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     1.0        1.0
+                  0.05                            0.0                     1.0        1.0
+                  exact_xdot                      1.0                     1.0        1.0
+HyperBao          0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+HyperCai          0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+HyperLorenz       0.0                             0.0                     0.0        0.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+HyperPang         0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+HyperQi           0.0                             0.0                     0.0        0.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+HyperWang         0.0                             0.0                     0.0        0.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     0.0        0.0
+HyperXu           0.0                             0.0                     0.0        0.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     0.0        0.0
+HyperYangChen     0.0                             0.0                     0.0        0.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+Laser             0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+Lorenz            0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+Lorenz96          0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     1.0        0.0
+                  0.05                            0.0                     1.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+LorenzStenflo     0.0                             0.0                     0.0        0.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+LuChen            0.0                             0.0                     0.0        0.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+LuChenCheng       0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+MooreSpiegel      0.0                             0.0                     0.0        0.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      0.0                     0.0        0.0
+NewtonLiepnik     0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+NoseHoover        0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+NuclearQuadrupole 0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     1.0        1.0
+                  0.05                            0.0                     1.0        1.0
+                  exact_xdot                      1.0                     1.0        1.0
+PanXuZhou         0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+PehlivanWei       0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+Qi                0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+QiChen            0.0                             0.0                     0.0        0.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+RayleighBenard    0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+RikitakeDynamo    0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+Rucklidge         0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        1.0
+                  exact_xdot                      1.0                     1.0        1.0
+Sakarya           0.0                             0.0                     0.0        0.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+ShimizuMorioka    0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     1.0        1.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+SprottA           0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     1.0        1.0
+                  0.05                            0.0                     1.0        1.0
+                  exact_xdot                      1.0                     1.0        1.0
+SprottB           0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+SprottC           0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+Tsucs2            0.0                             0.0                     1.0        1.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     1.0        1.0
+VallisElNino      0.0                             0.0                     0.0        0.0
+                  0.01                            0.0                     0.0        0.0
+                  0.05                            0.0                     0.0        0.0
+                  exact_xdot                      1.0                     0.0        0.0
+
+=== Aggregate (median rel. coef err / frac exact support / max sym resid) ===
+                                    med_err    exact  max_sym_resid
+noise      method                                                  
+0.0        ConstrainedSR3_v1_noaug 6.18e-03 0.00e+00       1.04e-13
+           ConstrainedSTLSQ_noaug  1.66e-04 6.90e-01       8.15e-14
+           EquivC_cc               1.96e-04 6.90e-01       1.51e-15
+0.01       ConstrainedSR3_v1_noaug 2.75e-01 0.00e+00       1.17e-13
+           ConstrainedSTLSQ_noaug  3.27e-01 1.90e-01       1.52e-12
+           EquivC_cc               3.26e-01 1.67e-01       1.35e-15
+0.05       ConstrainedSR3_v1_noaug 6.04e-01 0.00e+00       1.04e-13
+           ConstrainedSTLSQ_noaug  5.79e-01 1.67e-01       1.82e-12
+           EquivC_cc               5.72e-01 1.67e-01       1.55e-15
+exact_xdot ConstrainedSR3_v1_noaug 6.00e-14 9.76e-01       1.04e-13
+           ConstrainedSTLSQ_noaug  2.06e-14 8.81e-01       9.18e-14
+           EquivC_cc               1.49e-15 8.81e-01       1.32e-15

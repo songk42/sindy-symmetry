@@ -1,0 +1,10 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('SprottC', 0.1)]
+SprottC noise=0.1: |orbits|=30 true-in-span=0.0e+00 (37s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ        0.0135               True      0.0126            0.0517
+strong_OrbitSTLSQ              0.0135               True      0.0126            0.0517
+strong_STLSQ                   0.0135               True      0.0126            0.0517
+weak_ConstrainedSTLSQ          0.0057               True     0.00614            0.0221
+weak_OrbitSTLSQ                0.0057               True     0.00614            0.0221
+weak_STLSQ                     0.0057               True     0.00614            0.0221

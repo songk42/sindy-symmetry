@@ -1,0 +1,11 @@
+HyperYangChen noise=0.05 N=50 done (245s)
+HyperYangChen noise=0.05 N=100 done (464s)
+HyperYangChen noise=0.05 N=200 done (702s)
+HyperYangChen noise=0.05 N=400 done (970s)
+HyperYangChen noise=0.05 N=800 done (1188s)
+HyperYangChen noise=0.05 N=1600 done (1433s)
+HyperYangChen noise=0.05 N=3200 done (1697s)
+HyperYangChen noise=0.05 N=6400 done (1986s)
+HyperYangChen noise=0.05 N=10000 done (2275s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

@@ -1,0 +1,11 @@
+Bouali2 noise=0.05 N=50 done (242s)
+Bouali2 noise=0.05 N=100 done (455s)
+Bouali2 noise=0.05 N=200 done (697s)
+Bouali2 noise=0.05 N=400 done (950s)
+Bouali2 noise=0.05 N=800 done (1211s)
+Bouali2 noise=0.05 N=1600 done (1483s)
+Bouali2 noise=0.05 N=3200 done (1756s)
+Bouali2 noise=0.05 N=6400 done (2029s)
+Bouali2 noise=0.05 N=10000 done (2304s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

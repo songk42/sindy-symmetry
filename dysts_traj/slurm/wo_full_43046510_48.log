@@ -1,0 +1,12 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('HyperLorenz', 0.0)]
+  check strong_STLSQ vs alpha0_norm/STLSQ: OK
+  check strong_ConstrainedSTLSQ vs alpha0_norm/ConstrainedSTLSQ_noaug: OK
+HyperLorenz noise=0.0: |orbits|=73 true-in-span=2.1e-18 (109s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ       0.00015               True    7.55e-05           0.00629
+strong_OrbitSTLSQ             0.00015               True    7.55e-05           0.00629
+strong_STLSQ                  0.00015               True    7.55e-05           0.00629
+weak_ConstrainedSTLSQ        2.05e-06               True    2.05e-06          8.84e-06
+weak_OrbitSTLSQ              2.05e-06               True    2.05e-06          8.84e-06
+weak_STLSQ                   2.05e-06               True    2.05e-06          8.84e-06

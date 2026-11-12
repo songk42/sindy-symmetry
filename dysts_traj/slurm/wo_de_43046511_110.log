@@ -1,0 +1,11 @@
+NuclearQuadrupole noise=0.05 N=50 done (55s)
+NuclearQuadrupole noise=0.05 N=100 done (118s)
+NuclearQuadrupole noise=0.05 N=200 done (186s)
+NuclearQuadrupole noise=0.05 N=400 done (258s)
+NuclearQuadrupole noise=0.05 N=800 done (333s)
+NuclearQuadrupole noise=0.05 N=1600 done (408s)
+NuclearQuadrupole noise=0.05 N=3200 done (484s)
+NuclearQuadrupole noise=0.05 N=6400 done (562s)
+NuclearQuadrupole noise=0.05 N=10000 done (644s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

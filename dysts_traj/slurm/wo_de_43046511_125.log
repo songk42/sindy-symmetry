@@ -1,0 +1,11 @@
+QiChen noise=0.01 N=50 done (34s)
+QiChen noise=0.01 N=100 done (70s)
+QiChen noise=0.01 N=200 done (107s)
+QiChen noise=0.01 N=400 done (144s)
+QiChen noise=0.01 N=800 done (182s)
+QiChen noise=0.01 N=1600 done (221s)
+QiChen noise=0.01 N=3200 done (261s)
+QiChen noise=0.01 N=6400 done (301s)
+QiChen noise=0.01 N=10000 done (343s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

@@ -1,0 +1,11 @@
+HyperWang noise=0.05 N=50 done (99s)
+HyperWang noise=0.05 N=100 done (194s)
+HyperWang noise=0.05 N=200 done (292s)
+HyperWang noise=0.05 N=400 done (398s)
+HyperWang noise=0.05 N=800 done (505s)
+HyperWang noise=0.05 N=1600 done (614s)
+HyperWang noise=0.05 N=3200 done (726s)
+HyperWang noise=0.05 N=6400 done (849s)
+HyperWang noise=0.05 N=10000 done (984s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

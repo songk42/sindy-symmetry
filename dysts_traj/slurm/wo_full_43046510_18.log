@@ -1,0 +1,12 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('ChenLee', 0.05)]
+  check strong_STLSQ vs alpha0_norm/STLSQ: OK
+  check strong_ConstrainedSTLSQ vs alpha0_norm/ConstrainedSTLSQ_noaug: OK
+ChenLee noise=0.05: |orbits|=15 true-in-span=0.0e+00 (73s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ        0.0207               True      0.0207             0.716
+strong_OrbitSTLSQ              0.0408              False      0.0882              1.09
+strong_STLSQ                     1.45              False       0.694               inf
+weak_ConstrainedSTLSQ         0.00181               True     0.00285            0.0401
+weak_OrbitSTLSQ               0.00181               True     0.00285            0.0401
+weak_STLSQ                       2.04              False       0.243               inf

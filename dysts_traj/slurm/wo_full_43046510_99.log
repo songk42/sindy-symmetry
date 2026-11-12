@@ -1,0 +1,10 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('MooreSpiegel', 0.1)]
+MooreSpiegel noise=0.1: |orbits|=39 true-in-span=0.0e+00 (36s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ        0.0576              False       0.076              1.12
+strong_OrbitSTLSQ              0.0576              False       0.076              1.12
+strong_STLSQ                   0.0576              False       0.076              1.12
+weak_ConstrainedSTLSQ          0.0294               True       0.061               inf
+weak_OrbitSTLSQ                0.0294               True       0.061               inf
+weak_STLSQ                     0.0294               True       0.061               inf

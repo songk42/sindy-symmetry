@@ -1,0 +1,12 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('PanXuZhou', 0.01)]
+  check strong_STLSQ vs alpha0_norm/STLSQ: OK
+  check strong_ConstrainedSTLSQ vs alpha0_norm/ConstrainedSTLSQ_noaug: OK
+PanXuZhou noise=0.01: |orbits|=30 true-in-span=0.0e+00 (38s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ       0.00632               True     0.00578            0.0433
+strong_OrbitSTLSQ             0.00632               True     0.00578            0.0433
+strong_STLSQ                  0.00632               True     0.00578            0.0433
+weak_ConstrainedSTLSQ        0.000197               True    0.000289          0.000723
+weak_OrbitSTLSQ              0.000197               True    0.000289          0.000723
+weak_STLSQ                   0.000197               True    0.000289          0.000723

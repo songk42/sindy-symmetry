@@ -1,0 +1,6 @@
+/home/songk/sindy-symmetry/.venv/lib/python3.11/site-packages/dysts/base.py:31: UserWarning: Numba not installed. Falling back to no JIT compilation.
+  warnings.warn("Numba not installed. Falling back to no JIT compilation.")
+{'system': 'RikitakeDynamo', 'dim': 3, 'cond_mono': np.float64(581.3859761107735), 'cond_leg': np.float64(755.7140345045711), 'nnz_mono': 7, 'nnz_leg': 7, 'basis_err': np.float64(7.771561172376096e-16), 'C_resid_mono': np.float64(0.0), 'C_resid_leg': np.float64(0.0)}
+RikitakeDynamo noise=0.0 done (3s)
+RikitakeDynamo noise=0.01 done (6s)
+RikitakeDynamo noise=0.05 done (9s)

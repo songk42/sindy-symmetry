@@ -1,0 +1,11 @@
+Laser noise=0.0 N=50 done (128s)
+Laser noise=0.0 N=100 done (250s)
+Laser noise=0.0 N=200 done (387s)
+Laser noise=0.0 N=400 done (524s)
+Laser noise=0.0 N=800 done (661s)
+Laser noise=0.0 N=1600 done (790s)
+Laser noise=0.0 N=3200 done (905s)
+Laser noise=0.0 N=6400 done (1028s)
+Laser noise=0.0 N=10000 done (1150s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

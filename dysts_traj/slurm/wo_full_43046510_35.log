@@ -1,0 +1,10 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('Halvorsen', 0.1)]
+Halvorsen noise=0.1: |orbits|=20 true-in-span=1.5e-15 (59s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ        0.0165               True       0.013            0.0567
+strong_OrbitSTLSQ              0.0165               True       0.013            0.0567
+strong_STLSQ                   0.0167               True      0.0137            0.0647
+weak_ConstrainedSTLSQ         0.00444               True     0.00869            0.0356
+weak_OrbitSTLSQ               0.00444               True     0.00869            0.0356
+weak_STLSQ                      0.006               True     0.00976            0.0422

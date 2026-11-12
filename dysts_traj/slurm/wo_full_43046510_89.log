@@ -1,0 +1,12 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('LuChen', 0.01)]
+  check strong_STLSQ vs alpha0_norm/STLSQ: OK
+  check strong_ConstrainedSTLSQ vs alpha0_norm/ConstrainedSTLSQ_noaug: OK
+LuChen noise=0.01: |orbits|=30 true-in-span=0.0e+00 (37s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ             1              False           1              1.36
+strong_OrbitSTLSQ                   1              False           1              1.36
+strong_STLSQ                        1              False           1              1.36
+weak_ConstrainedSTLSQ            16.3              False        1.25              1.11
+weak_OrbitSTLSQ                  16.3              False        1.25              1.11
+weak_STLSQ                       16.3              False        1.25              1.11

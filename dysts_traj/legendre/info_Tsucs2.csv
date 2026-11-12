@@ -1,0 +1,2 @@
+system,dim,cond_mono,cond_leg,nnz_mono,nnz_leg,basis_err,C_resid_mono,C_resid_leg
+Tsucs2,3,79.27466610866988,93.63417293819606,8,9,8.881784197001252e-16,0.0,0.0

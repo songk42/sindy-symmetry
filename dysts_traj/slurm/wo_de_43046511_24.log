@@ -1,0 +1,11 @@
+DequanLi noise=0.0 N=50 done (768s)
+DequanLi noise=0.0 N=100 done (1434s)
+DequanLi noise=0.0 N=200 done (2167s)
+DequanLi noise=0.0 N=400 done (2929s)
+DequanLi noise=0.0 N=800 done (3831s)
+DequanLi noise=0.0 N=1600 done (4771s)
+DequanLi noise=0.0 N=3200 done (5694s)
+DequanLi noise=0.0 N=6400 done (6636s)
+DequanLi noise=0.0 N=10000 done (7527s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

@@ -1,0 +1,11 @@
+Chen noise=0.01 N=50 done (45s)
+Chen noise=0.01 N=100 done (90s)
+Chen noise=0.01 N=200 done (139s)
+Chen noise=0.01 N=400 done (188s)
+Chen noise=0.01 N=800 done (237s)
+Chen noise=0.01 N=1600 done (286s)
+Chen noise=0.01 N=3200 done (336s)
+Chen noise=0.01 N=6400 done (388s)
+Chen noise=0.01 N=10000 done (440s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

@@ -1,0 +1,120 @@
+Arneodo: |G|=1 n_eq=3 (true resid 9.3e-40) monotone=[(0, 0, -1), (1, 1, -1), (2, 2, -1)]
+  fits done (214.3s)
+Bouali2: |G|=1 n_eq=1 (true resid 0.0e+00) monotone=[(2, 2, -1)]
+  fits done (380.7s)
+BurkeShaw: |G|=1 n_eq=2 (true resid 4.7e-15) monotone=[(0, 0, -1), (1, 1, 1), (2, 2, -1)]
+  fits done (101.0s)
+Chen: |G|=1 n_eq=3 (true resid 1.6e-14) monotone=[(0, 0, -1), (1, 1, 1), (2, 2, -1)]
+  fits done (133.9s)
+ChenLee: |G|=3 n_eq=3 (true resid 3.1e-15) monotone=[(0, 0, 1), (1, 1, -1), (2, 2, -1)]
+  fits done (279.1s)
+Coullet: |G|=1 n_eq=3 (true resid 1.6e-15) monotone=[(0, 0, -1), (1, 1, -1), (2, 2, -1)]
+  fits done (192.0s)
+DequanLi: |G|=1 n_eq=1 (true resid 0.0e+00) monotone=[(1, 1, 1), (2, 2, 1)]
+  fits done (912.9s)
+Finance: |G|=1 n_eq=2 (true resid 3.5e-15) monotone=[(1, 1, -1), (2, 2, -1)]
+  fits done (200.4s)
+Halvorsen: |G|=2 n_eq=2 (true resid 4.0e-14) monotone=[(0, 0, -1), (1, 1, -1), (2, 2, -1)]
+  fits done (174.7s)
+HenonHeiles: |G|=1 n_eq=1 (true resid 0.0e+00) monotone=[(0, 0, -1), (1, 1, -1), (2, 2, -1), (3, 3, -1)]
+  fits done (761.9s)
+HyperBao: |G|=1 n_eq=1 (true resid 0.0e+00) monotone=[(0, 0, -1), (1, 1, 1), (2, 2, -1), (3, 3, -1)]
+  fits done (509.6s)
+HyperCai: |G|=1 n_eq=1 (true resid 0.0e+00) monotone=[(0, 0, -1), (1, 1, 1), (2, 2, -1), (3, 3, -1)]
+  fits done (282.3s)
+HyperLorenz: |G|=1 n_eq=1 (true resid 0.0e+00) monotone=[(0, 0, -1), (1, 1, -1), (2, 2, -1), (3, 3, 1)]
+  fits done (554.0s)
+HyperPang: |G|=1 n_eq=1 (true resid 0.0e+00) monotone=[(0, 0, -1), (1, 1, 1), (2, 2, -1), (3, 3, -1)]
+  fits done (224.0s)
+HyperQi: |G|=1 n_eq=1 (true resid 0.0e+00) monotone=[(0, 0, -1), (1, 1, 1), (2, 2, -1), (3, 3, -1)]
+  fits done (369.9s)
+HyperWang: |G|=1 n_eq=1 (true resid 0.0e+00) monotone=[(0, 0, -1), (1, 1, -1), (2, 2, -1), (3, 3, -1)]
+  fits done (272.7s)
+HyperXu: |G|=1 n_eq=1 (true resid 0.0e+00) monotone=[(0, 0, -1), (1, 1, -1), (2, 2, -1), (3, 3, -1)]
+  fits done (287.6s)
+HyperYangChen: |G|=1 n_eq=1 (true resid 0.0e+00) monotone=[(0, 0, -1), (1, 1, -1), (2, 2, -1), (3, 3, -1)]
+  fits done (486.2s)
+Laser: |G|=1 n_eq=3 (true resid 8.4e-15) monotone=[(0, 0, -1), (1, 1, -1), (2, 2, -1)]
+  fits done (297.4s)
+Lorenz: |G|=1 n_eq=3 (true resid 6.0e-15) monotone=[(0, 0, -1), (1, 1, -1), (2, 2, -1)]
+  fits done (100.7s)
+Lorenz96: |G|=3 n_eq=8 (true resid 1.1e-14) monotone=[(0, 0, -1), (1, 1, -1), (2, 2, -1), (3, 3, -1)]
+  fits done (102.4s)
+LorenzStenflo: |G|=1 n_eq=3 (true resid 6.7e-15) monotone=[(0, 0, -1), (1, 1, -1), (2, 2, -1), (3, 3, -1)]
+  fits done (171.0s)
+LuChen: |G|=1 n_eq=3 (true resid 2.3e-14) monotone=[(0, 0, -1), (1, 1, 1), (2, 2, -1)]
+  fits done (168.9s)
+LuChenCheng: |G|=1 n_eq=2 (true resid 7.5e-15) monotone=[(0, 0, 1), (1, 1, -1), (2, 2, -1)]
+  fits done (295.9s)
+MooreSpiegel: |G|=1 n_eq=1 (true resid 0.0e+00) monotone=[(0, 0, -1), (1, 1, -1), (2, 2, -1)]
+  fits done (168.7s)
+NewtonLiepnik: |G|=1 n_eq=4 (true resid 8.3e-16) monotone=[(0, 0, -1), (1, 1, -1), (2, 2, 1)]
+  fits done (109.9s)
+NoseHoover: |G|=1 n_eq=0 (true resid 0.0e+00) monotone=[(0, 0, -1), (2, 2, -1)]
+  fits done (1072.3s)
+NuclearQuadrupole: |G|=1 n_eq=1 (true resid 0.0e+00) monotone=[(0, 0, -1), (1, 1, -1), (2, 2, -1), (3, 3, -1)]
+  fits done (166.9s)
+PanXuZhou: |G|=1 n_eq=3 (true resid 1.5e-14) monotone=[(0, 0, -1), (1, 1, -1), (2, 2, -1)]
+  fits done (165.4s)
+PehlivanWei: |G|=1 n_eq=2 (true resid 2.5e-16) monotone=[(0, 0, -1), (2, 2, -1)]
+  fits done (343.7s)
+Qi: |G|=3 n_eq=3 (true resid 7.7e-13) monotone=[(0, 0, -1), (1, 1, 1), (2, 2, -1), (3, 3, -1)]
+  fits done (215.3s)
+QiChen: |G|=1 n_eq=3 (true resid 1.2e-13) monotone=[(0, 0, -1), (1, 1, 1), (2, 2, -1)]
+  fits done (90.6s)
+RayleighBenard: |G|=1 n_eq=3 (true resid 2.8e-14) monotone=[(0, 0, -1), (1, 1, 1), (2, 2, -1)]
+  fits done (83.5s)
+RikitakeDynamo: |G|=1 n_eq=2 (true resid 3.7e-15) monotone=[(0, 0, -1), (1, 1, -1), (2, 2, -1)]
+  fits done (175.3s)
+Rucklidge: |G|=1 n_eq=3 (true resid 2.4e-15) monotone=[(0, 0, -1), (1, 1, -1), (2, 2, -1)]
+  fits done (114.1s)
+Sakarya: |G|=1 n_eq=5 (true resid 1.2e-15) monotone=[(0, 0, -1), (1, 1, -1), (2, 2, 1)]
+  fits done (116.6s)
+ShimizuMorioka: |G|=1 n_eq=3 (true resid 2.8e-16) monotone=[(0, 0, -1), (1, 1, -1), (2, 2, -1)]
+  fits done (246.8s)
+SprottA: |G|=1 n_eq=0 (true resid 0.0e+00) monotone=[(0, 0, -1), (2, 2, -1)]
+  fits done (828.1s)
+SprottB: |G|=1 n_eq=2 (true resid 5.6e-17) monotone=[(0, 0, -1), (1, 1, -1), (2, 2, -1)]
+  fits done (75.8s)
+SprottC: |G|=1 n_eq=2 (true resid 8.3e-17) monotone=[(0, 0, -1), (1, 1, -1), (2, 2, -1)]
+  fits done (112.7s)
+Tsucs2: |G|=1 n_eq=1 (true resid 0.0e+00) monotone=[(1, 1, 1), (2, 2, 1)]
+  fits done (990.6s)
+VallisElNino: |G|=1 n_eq=3 (true resid 1.6e-14) monotone=[(0, 0, -1), (1, 1, -1), (2, 2, -1)]
+  fits done (119.3s)
+
+=== Aggregate (median rel. coef err / frac exact support / max sym resid) ===
+                           med_err    exact  max_sym_resid
+noise      method                                         
+0.0        EquivC         1.96e-04 6.90e-01       3.44e-07
+           EquivC_cc      1.96e-04 6.90e-01       5.65e-16
+           SINDySI_full   1.07e-04 9.29e-01       3.76e-16
+           SINDySI_none   1.20e-04 9.29e-01       3.89e-05
+           SINDySI_paper  1.07e-04 9.29e-01       3.51e-05
+           SINDySI_sym    1.20e-04 9.29e-01       9.41e-16
+           SINDySI_sym_eq 1.07e-04 9.29e-01       1.13e-15
+           SI_full        4.43e-03 0.00e+00       2.57e-13
+0.01       EquivC         3.32e-01 1.67e-01       1.46e-04
+           EquivC_cc      3.32e-01 1.67e-01       6.76e-16
+           SINDySI_full   9.63e-03 7.38e-01       3.85e-16
+           SINDySI_none   1.23e-02 6.19e-01       3.78e-01
+           SINDySI_paper  9.63e-03 7.14e-01       8.13e-04
+           SINDySI_sym    1.23e-02 6.43e-01       9.59e-16
+           SINDySI_sym_eq 1.00e-02 6.67e-01       9.63e-16
+           SI_full        2.19e-01 0.00e+00       2.83e-13
+0.05       EquivC         5.23e-01 1.67e-01       7.83e-05
+           EquivC_cc      5.23e-01 1.67e-01       6.05e-16
+           SINDySI_full   1.63e-02 5.95e-01       3.86e-16
+           SINDySI_none   2.14e-02 5.00e-01       1.18e+00
+           SINDySI_paper  1.63e-02 5.71e-01       5.09e-03
+           SINDySI_sym    2.14e-02 5.00e-01       5.71e-16
+           SINDySI_sym_eq 2.11e-02 5.24e-01       8.06e-16
+           SI_full        2.40e-01 0.00e+00       1.15e-11
+exact_xdot EquivC         1.72e-15 8.81e-01       3.76e-16
+           EquivC_cc      1.39e-15 8.81e-01       5.33e-16
+           SINDySI_full   5.58e-14 9.76e-01       3.76e-16
+           SINDySI_none   3.07e-15 9.76e-01       4.67e-15
+           SINDySI_paper  5.59e-14 9.76e-01       6.94e-15
+           SINDySI_sym    2.96e-15 9.76e-01       7.52e-16
+           SINDySI_sym_eq 2.79e-15 9.76e-01       1.13e-15
+           SI_full        7.67e-07 7.14e-02       2.35e-14

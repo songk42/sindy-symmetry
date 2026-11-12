@@ -1,0 +1,11 @@
+SprottA noise=0.05 N=50 done (487s)
+SprottA noise=0.05 N=100 done (994s)
+SprottA noise=0.05 N=200 done (1571s)
+SprottA noise=0.05 N=400 done (2239s)
+SprottA noise=0.05 N=800 done (2912s)
+SprottA noise=0.05 N=1600 done (3590s)
+SprottA noise=0.05 N=3200 done (4278s)
+SprottA noise=0.05 N=6400 done (4953s)
+SprottA noise=0.05 N=10000 done (5699s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

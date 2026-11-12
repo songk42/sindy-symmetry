@@ -1,0 +1,11 @@
+Lorenz noise=0.0 N=50 done (33s)
+Lorenz noise=0.0 N=100 done (64s)
+Lorenz noise=0.0 N=200 done (94s)
+Lorenz noise=0.0 N=400 done (125s)
+Lorenz noise=0.0 N=800 done (156s)
+Lorenz noise=0.0 N=1600 done (191s)
+Lorenz noise=0.0 N=3200 done (231s)
+Lorenz noise=0.0 N=6400 done (268s)
+Lorenz noise=0.0 N=10000 done (304s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

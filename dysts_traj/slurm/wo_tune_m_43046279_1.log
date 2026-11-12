@@ -1,0 +1,121 @@
+weak: m=16 p=8 stride=0; forms=['weak']; tasks=[('Arneodo', 0.0), ('Arneodo', 0.01), ('Arneodo', 0.05), ('Arneodo', 0.1), ('HyperBao', 0.0), ('HyperBao', 0.01), ('HyperBao', 0.05), ('HyperBao', 0.1), ('Lorenz96', 0.0), ('Lorenz96', 0.01), ('Lorenz96', 0.05), ('Lorenz96', 0.1), ('Qi', 0.0), ('Qi', 0.01), ('Qi', 0.05), ('Qi', 0.1), ('Tsucs2', 0.0), ('Tsucs2', 0.01), ('Tsucs2', 0.05), ('Tsucs2', 0.1)]
+Arneodo noise=0.0: |orbits|=39 true-in-span=0.0e+00 (23s)
+                       coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                              
+weak_ConstrainedSTLSQ      1.46e-08               True    1.56e-08          2.77e-08
+weak_OrbitSTLSQ            1.46e-08               True    1.56e-08          2.77e-08
+weak_STLSQ                 1.46e-08               True    1.56e-08          2.77e-08
+Arneodo noise=0.01: |orbits|=39 true-in-span=0.0e+00 (20s)
+                       coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                              
+weak_ConstrainedSTLSQ      0.000268               True    0.000395           0.00137
+weak_OrbitSTLSQ            0.000268               True    0.000395           0.00137
+weak_STLSQ                 0.000268               True    0.000395           0.00137
+Arneodo noise=0.05: |orbits|=39 true-in-span=0.0e+00 (19s)
+                       coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                              
+weak_ConstrainedSTLSQ       0.00968               True     0.00881            0.0148
+weak_OrbitSTLSQ             0.00968               True     0.00881            0.0148
+weak_STLSQ                  0.00968               True     0.00881            0.0148
+Arneodo noise=0.1: |orbits|=39 true-in-span=0.0e+00 (21s)
+                       coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                              
+weak_ConstrainedSTLSQ        0.0271               True      0.0293            0.0522
+weak_OrbitSTLSQ              0.0271               True      0.0293            0.0522
+weak_STLSQ                   0.0271               True      0.0293            0.0522
+HyperBao noise=0.0: |orbits|=73 true-in-span=1.3e-17 (49s)
+                       coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                              
+weak_ConstrainedSTLSQ      6.21e-08               True    6.29e-08          7.21e-08
+weak_OrbitSTLSQ            6.21e-08               True    6.29e-08          7.21e-08
+weak_STLSQ                 6.21e-08               True    6.29e-08          7.21e-08
+HyperBao noise=0.01: |orbits|=73 true-in-span=1.3e-17 (48s)
+                       coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                              
+weak_ConstrainedSTLSQ      0.000169               True    0.000376           0.00392
+weak_OrbitSTLSQ            0.000169               True    0.000376           0.00392
+weak_STLSQ                 0.000169               True    0.000376           0.00392
+HyperBao noise=0.05: |orbits|=73 true-in-span=1.3e-17 (44s)
+                       coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                              
+weak_ConstrainedSTLSQ          22.3              False       0.321               inf
+weak_OrbitSTLSQ                22.3              False       0.321               inf
+weak_STLSQ                     22.3              False       0.321               inf
+HyperBao noise=0.1: |orbits|=73 true-in-span=1.3e-17 (41s)
+                       coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                              
+weak_ConstrainedSTLSQ          27.7              False       0.946               inf
+weak_OrbitSTLSQ                  32              False        0.96               inf
+weak_STLSQ                     27.7              False       0.946               inf
+Lorenz96 noise=0.0: |orbits|=35 true-in-span=5.5e-16 (9s)
+                       coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                              
+weak_ConstrainedSTLSQ      7.17e-05               True    7.17e-05          4.06e-06
+weak_OrbitSTLSQ            7.17e-05               True    7.17e-05          4.06e-06
+weak_STLSQ                 7.17e-05               True    7.17e-05          4.06e-06
+Lorenz96 noise=0.01: |orbits|=35 true-in-span=5.5e-16 (9s)
+                       coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                              
+weak_ConstrainedSTLSQ      0.000114               True    0.000142          0.000333
+weak_OrbitSTLSQ            0.000114               True    0.000142          0.000333
+weak_STLSQ                 0.000461               True    0.000543            0.0112
+Lorenz96 noise=0.05: |orbits|=35 true-in-span=5.5e-16 (10s)
+                       coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                              
+weak_ConstrainedSTLSQ       0.00117               True     0.00159            0.0229
+weak_OrbitSTLSQ             0.00117               True     0.00159            0.0229
+weak_STLSQ                  0.00177               True      0.0025             0.047
+Lorenz96 noise=0.1: |orbits|=35 true-in-span=5.5e-16 (10s)
+                       coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                              
+weak_ConstrainedSTLSQ        0.0095               True     0.00979            0.0515
+weak_OrbitSTLSQ              0.0095               True     0.00979            0.0515
+weak_STLSQ                   0.0101               True      0.0107            0.0865
+Qi noise=0.0: |orbits|=48 true-in-span=0.0e+00 (26s)
+                       coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                              
+weak_ConstrainedSTLSQ      2.63e-06               True    2.63e-06          7.48e-08
+weak_OrbitSTLSQ            2.63e-06               True    2.63e-06          7.48e-08
+weak_STLSQ                 2.63e-06               True    2.63e-06          7.48e-08
+Qi noise=0.01: |orbits|=48 true-in-span=0.0e+00 (23s)
+                       coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                              
+weak_ConstrainedSTLSQ       0.00101               True    0.000833           0.00138
+weak_OrbitSTLSQ             0.00101               True    0.000833           0.00138
+weak_STLSQ                        1              False           1              1.31
+Qi noise=0.05: |orbits|=48 true-in-span=0.0e+00 (19s)
+                       coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                              
+weak_ConstrainedSTLSQ             1              False           1              1.31
+weak_OrbitSTLSQ                1.25              False       0.751              1.34
+weak_STLSQ                        1              False           1              1.31
+Qi noise=0.1: |orbits|=48 true-in-span=0.0e+00 (18s)
+                       coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                              
+weak_ConstrainedSTLSQ             1              False           1              1.31
+weak_OrbitSTLSQ                1.11              False       0.765              1.37
+weak_STLSQ                        1              False           1              1.31
+Tsucs2 noise=0.0: |orbits|=30 true-in-span=0.0e+00 (96s)
+                       coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                              
+weak_ConstrainedSTLSQ      4.48e-06               True    4.48e-06           5.7e-06
+weak_OrbitSTLSQ            4.48e-06               True    4.48e-06           5.7e-06
+weak_STLSQ                 4.48e-06               True    4.48e-06           5.7e-06
+Tsucs2 noise=0.01: |orbits|=30 true-in-span=0.0e+00 (98s)
+                       coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                              
+weak_ConstrainedSTLSQ      0.000417               True    0.000357            0.0582
+weak_OrbitSTLSQ            0.000417               True    0.000357            0.0582
+weak_STLSQ                 0.000417               True    0.000357            0.0582
+Tsucs2 noise=0.05: |orbits|=30 true-in-span=0.0e+00 (103s)
+                       coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                              
+weak_ConstrainedSTLSQ       0.00153               True     0.00176             0.593
+weak_OrbitSTLSQ             0.00153               True     0.00176             0.593
+weak_STLSQ                  0.00153               True     0.00176             0.593
+Tsucs2 noise=0.1: |orbits|=30 true-in-span=0.0e+00 (93s)
+                       coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                              
+weak_ConstrainedSTLSQ       0.00759               True        0.01              1.13
+weak_OrbitSTLSQ             0.00759               True        0.01              1.13
+weak_STLSQ                  0.00759               True        0.01              1.13

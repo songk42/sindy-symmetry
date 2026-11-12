@@ -1,0 +1,12 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('HenonHeiles', 0.01)]
+  check strong_STLSQ vs alpha0_norm/STLSQ: OK
+  check strong_ConstrainedSTLSQ vs alpha0_norm/ConstrainedSTLSQ_noaug: OK
+HenonHeiles noise=0.01: |orbits|=70 true-in-span=0.0e+00 (220s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ       0.00153               True     0.00104            0.0118
+strong_OrbitSTLSQ             0.00153               True     0.00104            0.0118
+strong_STLSQ                  0.00153               True     0.00104            0.0118
+weak_ConstrainedSTLSQ        6.98e-05               True    8.43e-05          0.000545
+weak_OrbitSTLSQ              6.98e-05               True    8.43e-05          0.000545
+weak_STLSQ                   6.98e-05               True    8.43e-05          0.000545

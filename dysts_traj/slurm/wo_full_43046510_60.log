@@ -1,0 +1,12 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('HyperWang', 0.0)]
+  check strong_STLSQ vs alpha0_norm/STLSQ: OK
+  check strong_ConstrainedSTLSQ vs alpha0_norm/ConstrainedSTLSQ_noaug: OK
+HyperWang noise=0.0: |orbits|=73 true-in-span=0.0e+00 (76s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ      1.57e-05               True    1.56e-05          4.52e-05
+strong_OrbitSTLSQ            1.57e-05               True    1.56e-05          4.52e-05
+strong_STLSQ                 1.57e-05               True    1.56e-05          4.52e-05
+weak_ConstrainedSTLSQ        1.74e-07               True    1.74e-07          1.35e-08
+weak_OrbitSTLSQ              1.74e-07               True    1.74e-07          1.35e-08
+weak_STLSQ                   1.74e-07               True    1.74e-07          1.35e-08

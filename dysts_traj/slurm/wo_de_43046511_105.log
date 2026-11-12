@@ -1,0 +1,11 @@
+NoseHoover noise=0.01 N=50 done (633s)
+NoseHoover noise=0.01 N=100 done (1343s)
+NoseHoover noise=0.01 N=200 done (2193s)
+NoseHoover noise=0.01 N=400 done (3091s)
+NoseHoover noise=0.01 N=800 done (3988s)
+NoseHoover noise=0.01 N=1600 done (5273s)
+NoseHoover noise=0.01 N=3200 done (6553s)
+NoseHoover noise=0.01 N=6400 done (7643s)
+NoseHoover noise=0.01 N=10000 done (8935s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

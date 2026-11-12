@@ -12,6 +12,6 @@
 cd /home/songk/sindy-symmetry
 source .venv/bin/activate
 export DYSTS_DATA_DIR=/home/songk/data-songk/dysts_hf/fine
-export LOG_DIR=/home/songk/sindy-symmetry/logs
+export LOG_DIR=${LOG_DIR:-/home/songk/sindy-symmetry/logs}
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 python notebooks/data_efficiency_dysts.py "$@"

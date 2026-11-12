@@ -1,0 +1,11 @@
+ShimizuMorioka noise=0.05 N=50 done (101s)
+ShimizuMorioka noise=0.05 N=100 done (205s)
+ShimizuMorioka noise=0.05 N=200 done (324s)
+ShimizuMorioka noise=0.05 N=400 done (444s)
+ShimizuMorioka noise=0.05 N=800 done (565s)
+ShimizuMorioka noise=0.05 N=1600 done (685s)
+ShimizuMorioka noise=0.05 N=3200 done (808s)
+ShimizuMorioka noise=0.05 N=6400 done (925s)
+ShimizuMorioka noise=0.05 N=10000 done (1038s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

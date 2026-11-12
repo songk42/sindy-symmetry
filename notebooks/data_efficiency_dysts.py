@@ -15,6 +15,9 @@
 #   ConstrainedSR3_l0_scaled  ConstrainedSR3 l0, nu = 1, column scaling, constrained unbias refit
 #   ConstrainedSR3_v1         v1: dense constrained least squares (reg_weight_lam = 0), no threshold
 #   SINDySI_full              SINDy-SI with symmetry + equilibria + monotonicity (SOS)
+#   LSQ_dense                 plain (non-sparse, unconstrained) least-squares polynomial regression, no threshold
+#
+# DE_METHODS=a,b (env) runs only those methods; DE_OUT=<subdir of LOG_DIR> changes the output directory.
 #
 # Usage: python data_efficiency_dysts.py <system> [<system> ...]   or   SLURM_ARRAY_TASK_ID=<i> (index into the
 # 42 systems of logs/sindy_si_dysts/side_info.csv). One CSV per system in logs/data_efficiency/.
@@ -38,7 +41,7 @@ warnings.filterwarnings("ignore")
 
 DATA_DIR = os.environ.get("DYSTS_DATA_DIR", "/home/songk/data-songk/dysts_hf/fine")
 LOG_DIR = os.environ.get("LOG_DIR", "/home/songk/sindy-symmetry/logs")
-OUT_DIR = os.path.join(LOG_DIR, "data_efficiency")
+OUT_DIR = os.path.join(LOG_DIR, os.environ.get("DE_OUT", "data_efficiency"))
 os.makedirs(OUT_DIR, exist_ok=True)
 
 WINDOWS = [50, 100, 200, 400, 800, 1600, 3200, 6400, 10000]  # samples (~100 per period)
@@ -52,6 +55,9 @@ ALPHA_OLD = 0.05
 SR3_NU, SR3_MAX_ITER = 1.0, 500
 METHODS = ["STLSQ_a0.05", "ConstrainedSTLSQ_a0.05", "STLSQ_scaled", "ConstrainedSTLSQ_scaled",
            "ConstrainedSR3_l0_scaled", "ConstrainedSR3_v1", "SINDySI_full"]
+if os.environ.get("DE_METHODS"):
+    METHODS = os.environ["DE_METHODS"].split(",")
+DENSE = {"ConstrainedSR3_v1", "LSQ_dense"}  # no threshold
 
 
 def fit_method(method, rt, Phi, Y, sysd, raw_scale, scaled_scale):
@@ -73,6 +79,8 @@ def fit_method(method, rt, Phi, Y, sysd, raw_scale, scaled_scale):
                                 equality_constraints=True, **cons)
     elif method == "ConstrainedSR3_v1":
         opt = ps.ConstrainedSR3(reg_weight_lam=0, equality_constraints=True, **cons)
+    elif method == "LSQ_dense":
+        return np.linalg.lstsq(Phi, Y, rcond=None)[0]  # (h, n)
     elif method == "SINDySI_full":
         return SINDySI(threshold=rt * scaled_scale, eq_lhs=C, eq_rhs=d, equilibria=sysd["equilibria"],
                        monotone=sysd["monotone"], ball=sysd["ball"]).fit(Phi, Y, sysd["powers"]).coef_
@@ -111,7 +119,7 @@ def run_system(name, side_row):
                 base = dict(system=name, noise=noise, N=N, rep=rep, start=start, n_periods=N * dt / period if period else np.nan,
                             n_lyap=N * dt * sysd["lyap"] if sysd["lyap"] else np.nan)
                 for method in METHODS:
-                    for rt in ([None] if method == "ConstrainedSR3_v1" else REL_THRESHOLDS):
+                    for rt in ([None] if method in DENSE else REL_THRESHOLDS):
                         tic = time.time()
                         try:
                             Xi = fit_method(method, rt, Phi, Y, sysd, raw_scale, scaled_scale)

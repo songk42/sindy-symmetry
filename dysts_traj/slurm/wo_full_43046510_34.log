@@ -1,0 +1,12 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('Halvorsen', 0.05)]
+  check strong_STLSQ vs alpha0_norm/STLSQ: OK
+  check strong_ConstrainedSTLSQ vs alpha0_norm/ConstrainedSTLSQ_noaug: OK
+Halvorsen noise=0.05: |orbits|=20 true-in-span=1.5e-15 (56s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ       0.00758               True     0.00631            0.0264
+strong_OrbitSTLSQ             0.00758               True     0.00631            0.0264
+strong_STLSQ                  0.00759               True     0.00636            0.0263
+weak_ConstrainedSTLSQ         0.00154               True     0.00265            0.0143
+weak_OrbitSTLSQ               0.00154               True     0.00265            0.0143
+weak_STLSQ                    0.00159               True     0.00277            0.0144

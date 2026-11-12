@@ -1,0 +1,2 @@
+system,dim,cond_mono,cond_leg,nnz_mono,nnz_leg,basis_err,C_resid_mono,C_resid_leg
+SprottA,3,7.714169586265104,12.070346804706812,5,5,8.881784197001252e-16,0.0,0.0

@@ -1,0 +1,6 @@
+/home/songk/sindy-symmetry/.venv/lib/python3.11/site-packages/dysts/base.py:31: UserWarning: Numba not installed. Falling back to no JIT compilation.
+  warnings.warn("Numba not installed. Falling back to no JIT compilation.")
+{'system': 'NoseHoover', 'dim': 3, 'cond_mono': np.float64(15.284973897921628), 'cond_leg': np.float64(43.65619517427555), 'nnz_mono': 5, 'nnz_leg': 5, 'basis_err': np.float64(7.771561172376096e-16), 'C_resid_mono': np.float64(0.0), 'C_resid_leg': np.float64(0.0)}
+NoseHoover noise=0.0 done (2s)
+NoseHoover noise=0.01 done (4s)
+NoseHoover noise=0.05 done (6s)

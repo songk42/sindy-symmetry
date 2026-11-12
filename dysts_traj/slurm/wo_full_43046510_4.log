@@ -1,0 +1,12 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('Bouali2', 0.0)]
+  check strong_STLSQ vs alpha0_norm/STLSQ: OK
+  check strong_ConstrainedSTLSQ vs alpha0_norm/ConstrainedSTLSQ_noaug: OK
+Bouali2 noise=0.0: |orbits|=30 true-in-span=0.0e+00 (83s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ      0.000269               True     0.00262             0.304
+strong_OrbitSTLSQ            0.000269               True     0.00262             0.304
+strong_STLSQ                 0.000269               True     0.00262             0.304
+weak_ConstrainedSTLSQ        0.000264               True     0.00261             0.304
+weak_OrbitSTLSQ              0.000264               True     0.00261             0.304
+weak_STLSQ                   0.000264               True     0.00261             0.304

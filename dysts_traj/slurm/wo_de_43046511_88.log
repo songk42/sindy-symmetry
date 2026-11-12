@@ -1,0 +1,11 @@
+LuChen noise=0.0 N=50 done (74s)
+LuChen noise=0.0 N=100 done (145s)
+LuChen noise=0.0 N=200 done (218s)
+LuChen noise=0.0 N=400 done (286s)
+LuChen noise=0.0 N=800 done (354s)
+LuChen noise=0.0 N=1600 done (425s)
+LuChen noise=0.0 N=3200 done (496s)
+LuChen noise=0.0 N=6400 done (571s)
+LuChen noise=0.0 N=10000 done (642s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

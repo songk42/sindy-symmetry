@@ -1,0 +1,2 @@
+system,dim,cond_mono,cond_leg,nnz_mono,nnz_leg,basis_err,C_resid_mono,C_resid_leg
+BurkeShaw,3,35.28635741841193,275.8179045350657,6,6,4.440892098500626e-16,0.0,0.0

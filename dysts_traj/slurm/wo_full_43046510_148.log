@@ -1,0 +1,12 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('SprottA', 0.0)]
+  check strong_STLSQ vs alpha0_norm/STLSQ: OK
+  check strong_ConstrainedSTLSQ vs alpha0_norm/ConstrainedSTLSQ_noaug: OK
+SprottA noise=0.0: |orbits|=30 true-in-span=0.0e+00 (222s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ      0.000108               True    8.23e-05           0.00289
+strong_OrbitSTLSQ            0.000108               True    8.23e-05           0.00289
+strong_STLSQ                 0.000108               True    8.23e-05           0.00289
+weak_ConstrainedSTLSQ        2.33e-06               True    2.33e-06          2.81e-07
+weak_OrbitSTLSQ              2.33e-06               True    2.33e-06          2.81e-07
+weak_STLSQ                   2.33e-06               True    2.33e-06          2.81e-07

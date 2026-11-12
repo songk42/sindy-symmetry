@@ -1,0 +1,10 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('RikitakeDynamo', 0.1)]
+RikitakeDynamo noise=0.1: |orbits|=30 true-in-span=0.0e+00 (41s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ        0.0215               True      0.0173             0.265
+strong_OrbitSTLSQ              0.0215               True      0.0173             0.265
+strong_STLSQ                   0.0215               True      0.0173             0.265
+weak_ConstrainedSTLSQ         0.00678               True      0.0055             0.163
+weak_OrbitSTLSQ               0.00678               True      0.0055             0.163
+weak_STLSQ                    0.00678               True      0.0055             0.163

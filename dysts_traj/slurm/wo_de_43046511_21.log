@@ -1,0 +1,11 @@
+Coullet noise=0.01 N=50 done (64s)
+Coullet noise=0.01 N=100 done (136s)
+Coullet noise=0.01 N=200 done (221s)
+Coullet noise=0.01 N=400 done (308s)
+Coullet noise=0.01 N=800 done (396s)
+Coullet noise=0.01 N=1600 done (483s)
+Coullet noise=0.01 N=3200 done (571s)
+Coullet noise=0.01 N=6400 done (660s)
+Coullet noise=0.01 N=10000 done (749s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

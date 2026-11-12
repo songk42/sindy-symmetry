@@ -1,0 +1,12 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('NuclearQuadrupole', 0.0)]
+  check strong_STLSQ vs alpha0_norm/STLSQ: OK
+  check strong_ConstrainedSTLSQ vs alpha0_norm/ConstrainedSTLSQ_noaug: OK
+NuclearQuadrupole noise=0.0: |orbits|=70 true-in-span=0.0e+00 (35s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ      3.96e-05               True    2.34e-05          5.18e-05
+strong_OrbitSTLSQ            3.96e-05               True    2.34e-05          5.18e-05
+strong_STLSQ                 3.96e-05               True    2.34e-05          5.18e-05
+weak_ConstrainedSTLSQ        1.73e-07               True    1.73e-07          3.53e-08
+weak_OrbitSTLSQ              1.73e-07               True    1.73e-07          3.53e-08
+weak_STLSQ                   1.73e-07               True    1.73e-07          3.53e-08

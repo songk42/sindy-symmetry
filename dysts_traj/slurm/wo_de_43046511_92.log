@@ -1,0 +1,11 @@
+LuChenCheng noise=0.0 N=50 done (126s)
+LuChenCheng noise=0.0 N=100 done (291s)
+LuChenCheng noise=0.0 N=200 done (476s)
+LuChenCheng noise=0.0 N=400 done (663s)
+LuChenCheng noise=0.0 N=800 done (834s)
+LuChenCheng noise=0.0 N=1600 done (1004s)
+LuChenCheng noise=0.0 N=3200 done (1171s)
+LuChenCheng noise=0.0 N=6400 done (1339s)
+LuChenCheng noise=0.0 N=10000 done (1508s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

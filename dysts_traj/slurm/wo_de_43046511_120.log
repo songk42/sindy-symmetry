@@ -1,0 +1,11 @@
+Qi noise=0.0 N=50 done (112s)
+Qi noise=0.0 N=100 done (218s)
+Qi noise=0.0 N=200 done (325s)
+Qi noise=0.0 N=400 done (432s)
+Qi noise=0.0 N=800 done (539s)
+Qi noise=0.0 N=1600 done (647s)
+Qi noise=0.0 N=3200 done (756s)
+Qi noise=0.0 N=6400 done (867s)
+Qi noise=0.0 N=10000 done (981s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

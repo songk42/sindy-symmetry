@@ -1,0 +1,12 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('Coullet', 0.0)]
+  check strong_STLSQ vs alpha0_norm/STLSQ: OK
+  check strong_ConstrainedSTLSQ vs alpha0_norm/ConstrainedSTLSQ_noaug: OK
+Coullet noise=0.0: |orbits|=39 true-in-span=0.0e+00 (51s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ      6.23e-06               True       3e-06          9.92e-06
+strong_OrbitSTLSQ            6.23e-06               True       3e-06          9.92e-06
+strong_STLSQ                 6.23e-06               True       3e-06          9.92e-06
+weak_ConstrainedSTLSQ         7.3e-09               True    7.33e-09          8.07e-09
+weak_OrbitSTLSQ               7.3e-09               True    7.33e-09          8.07e-09
+weak_STLSQ                    7.3e-09               True    7.33e-09          8.07e-09

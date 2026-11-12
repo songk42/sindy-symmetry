@@ -1,0 +1,12 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('HyperBao', 0.0)]
+  check strong_STLSQ vs alpha0_norm/STLSQ: OK
+  check strong_ConstrainedSTLSQ vs alpha0_norm/ConstrainedSTLSQ_noaug: OK
+HyperBao noise=0.0: |orbits|=73 true-in-span=1.3e-17 (132s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ      1.53e-05               True    8.26e-06          0.000102
+strong_OrbitSTLSQ            1.53e-05               True    8.26e-06          0.000102
+strong_STLSQ                 1.53e-05               True    8.26e-06          0.000102
+weak_ConstrainedSTLSQ        5.81e-08               True    5.81e-08          7.78e-08
+weak_OrbitSTLSQ              5.81e-08               True    5.81e-08          7.78e-08
+weak_STLSQ                   5.81e-08               True    5.81e-08          7.78e-08

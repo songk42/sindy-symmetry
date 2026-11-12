@@ -1,0 +1,11 @@
+BurkeShaw noise=0.01 N=50 done (36s)
+BurkeShaw noise=0.01 N=100 done (72s)
+BurkeShaw noise=0.01 N=200 done (110s)
+BurkeShaw noise=0.01 N=400 done (149s)
+BurkeShaw noise=0.01 N=800 done (189s)
+BurkeShaw noise=0.01 N=1600 done (228s)
+BurkeShaw noise=0.01 N=3200 done (267s)
+BurkeShaw noise=0.01 N=6400 done (307s)
+BurkeShaw noise=0.01 N=10000 done (348s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

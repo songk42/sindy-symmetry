@@ -1,0 +1,11 @@
+HyperXu noise=0.0 N=50 done (130s)
+HyperXu noise=0.0 N=100 done (254s)
+HyperXu noise=0.0 N=200 done (381s)
+HyperXu noise=0.0 N=400 done (507s)
+HyperXu noise=0.0 N=800 done (633s)
+HyperXu noise=0.0 N=1600 done (761s)
+HyperXu noise=0.0 N=3200 done (892s)
+HyperXu noise=0.0 N=6400 done (1027s)
+HyperXu noise=0.0 N=10000 done (1161s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

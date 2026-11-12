@@ -1,0 +1,2 @@
+system,dim,cond_mono,cond_leg,nnz_mono,nnz_leg,basis_err,C_resid_mono,C_resid_leg
+NoseHoover,3,15.284973897921628,43.65619517427555,5,5,7.771561172376096e-16,0.0,0.0

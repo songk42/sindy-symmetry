@@ -1,0 +1,6 @@
+/home/songk/sindy-symmetry/.venv/lib/python3.11/site-packages/dysts/base.py:31: UserWarning: Numba not installed. Falling back to no JIT compilation.
+  warnings.warn("Numba not installed. Falling back to no JIT compilation.")
+{'system': 'Halvorsen', 'dim': 3, 'cond_mono': np.float64(169.5363564032523), 'cond_leg': np.float64(327.78441311342624), 'nnz_mono': 12, 'nnz_leg': 15, 'basis_err': np.float64(7.771561172376096e-16), 'C_resid_mono': np.float64(3.419486915845482e-14), 'C_resid_leg': np.float64(3.419486915845482e-14)}
+Halvorsen noise=0.0 done (2s)
+Halvorsen noise=0.01 done (4s)
+Halvorsen noise=0.05 done (7s)

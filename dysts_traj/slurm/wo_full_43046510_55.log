@@ -1,0 +1,10 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('HyperPang', 0.1)]
+HyperPang noise=0.1: |orbits|=73 true-in-span=0.0e+00 (41s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ             1              False           1              1.13
+strong_OrbitSTLSQ                   1              False           1              1.13
+strong_STLSQ                        1              False           1              1.13
+weak_ConstrainedSTLSQ              17              False       0.255               inf
+weak_OrbitSTLSQ                    17              False       0.255               inf
+weak_STLSQ                         11              False       0.256             0.889

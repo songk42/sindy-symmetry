@@ -1,0 +1,11 @@
+Sakarya noise=0.0 N=50 done (50s)
+Sakarya noise=0.0 N=100 done (101s)
+Sakarya noise=0.0 N=200 done (152s)
+Sakarya noise=0.0 N=400 done (203s)
+Sakarya noise=0.0 N=800 done (255s)
+Sakarya noise=0.0 N=1600 done (306s)
+Sakarya noise=0.0 N=3200 done (358s)
+Sakarya noise=0.0 N=6400 done (411s)
+Sakarya noise=0.0 N=10000 done (466s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

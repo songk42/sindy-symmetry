@@ -1,0 +1,11 @@
+NewtonLiepnik noise=0.01 N=50 done (41s)
+NewtonLiepnik noise=0.01 N=100 done (89s)
+NewtonLiepnik noise=0.01 N=200 done (136s)
+NewtonLiepnik noise=0.01 N=400 done (185s)
+NewtonLiepnik noise=0.01 N=800 done (234s)
+NewtonLiepnik noise=0.01 N=1600 done (284s)
+NewtonLiepnik noise=0.01 N=3200 done (334s)
+NewtonLiepnik noise=0.01 N=6400 done (384s)
+NewtonLiepnik noise=0.01 N=10000 done (436s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

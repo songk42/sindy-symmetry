@@ -1,0 +1,2 @@
+system,dim,cond_mono,cond_leg,nnz_mono,nnz_leg,basis_err,C_resid_mono,C_resid_leg
+VallisElNino,3,225.88812431171522,96990.40473795866,7,7,7.216449660063518e-16,0.0,0.0

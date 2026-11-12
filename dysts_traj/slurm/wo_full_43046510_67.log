@@ -1,0 +1,10 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('HyperXu', 0.1)]
+HyperXu noise=0.1: |orbits|=73 true-in-span=1.2e-18 (73s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ        0.0973              False        0.63              2.01
+strong_OrbitSTLSQ              0.0973              False        0.63              2.01
+strong_STLSQ                   0.0973              False        0.63              2.01
+weak_ConstrainedSTLSQ         0.00154               True     0.00425            0.0357
+weak_OrbitSTLSQ               0.00154               True     0.00425            0.0357
+weak_STLSQ                    0.00154               True     0.00425            0.0357

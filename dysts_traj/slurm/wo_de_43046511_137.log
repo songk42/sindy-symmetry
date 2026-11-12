@@ -1,0 +1,11 @@
+Rucklidge noise=0.01 N=50 done (45s)
+Rucklidge noise=0.01 N=100 done (94s)
+Rucklidge noise=0.01 N=200 done (145s)
+Rucklidge noise=0.01 N=400 done (195s)
+Rucklidge noise=0.01 N=800 done (246s)
+Rucklidge noise=0.01 N=1600 done (297s)
+Rucklidge noise=0.01 N=3200 done (349s)
+Rucklidge noise=0.01 N=6400 done (402s)
+Rucklidge noise=0.01 N=10000 done (455s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

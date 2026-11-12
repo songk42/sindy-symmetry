@@ -1,0 +1,6 @@
+/home/songk/sindy-symmetry/.venv/lib/python3.11/site-packages/dysts/base.py:31: UserWarning: Numba not installed. Falling back to no JIT compilation.
+  warnings.warn("Numba not installed. Falling back to no JIT compilation.")
+{'system': 'HyperLorenz', 'dim': 4, 'cond_mono': np.float64(822.0726578452775), 'cond_leg': np.float64(56879.21046361333), 'nnz_mono': 10, 'nnz_leg': 10, 'basis_err': np.float64(5.551115123125783e-16), 'C_resid_mono': np.float64(0.0), 'C_resid_leg': np.float64(0.0)}
+HyperLorenz noise=0.0 done (8s)
+HyperLorenz noise=0.01 done (17s)
+HyperLorenz noise=0.05 done (26s)

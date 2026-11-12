@@ -1,0 +1,10 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('ChenLee', 0.1)]
+ChenLee noise=0.1: |orbits|=15 true-in-span=0.0e+00 (74s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ        0.0429              False      0.0889               1.1
+strong_OrbitSTLSQ              0.0429              False      0.0889               1.1
+strong_STLSQ                     1.45              False       0.694               inf
+weak_ConstrainedSTLSQ          0.0115               True      0.0111             0.162
+weak_OrbitSTLSQ                0.0115               True      0.0111             0.162
+weak_STLSQ                        2.1              False        0.68               inf

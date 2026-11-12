@@ -1,0 +1,11 @@
+Halvorsen noise=0.05 N=50 done (70s)
+Halvorsen noise=0.05 N=100 done (147s)
+Halvorsen noise=0.05 N=200 done (234s)
+Halvorsen noise=0.05 N=400 done (324s)
+Halvorsen noise=0.05 N=800 done (414s)
+Halvorsen noise=0.05 N=1600 done (505s)
+Halvorsen noise=0.05 N=3200 done (597s)
+Halvorsen noise=0.05 N=6400 done (689s)
+Halvorsen noise=0.05 N=10000 done (782s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

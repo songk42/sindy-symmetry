@@ -1,0 +1,12 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('Tsucs2', 0.0)]
+  check strong_STLSQ vs alpha0_norm/STLSQ: OK
+  check strong_ConstrainedSTLSQ vs alpha0_norm/ConstrainedSTLSQ_noaug: OK
+Tsucs2 noise=0.0: |orbits|=30 true-in-span=0.0e+00 (310s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ      0.000208               True    0.000149            0.0239
+strong_OrbitSTLSQ            0.000208               True    0.000149            0.0239
+strong_STLSQ                 0.000208               True    0.000149            0.0239
+weak_ConstrainedSTLSQ        4.48e-06               True    4.48e-06          5.46e-06
+weak_OrbitSTLSQ              4.48e-06               True    4.48e-06          5.46e-06
+weak_STLSQ                   4.48e-06               True    4.48e-06          5.46e-06

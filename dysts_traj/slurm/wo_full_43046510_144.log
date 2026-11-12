@@ -1,0 +1,12 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('ShimizuMorioka', 0.0)]
+  check strong_STLSQ vs alpha0_norm/STLSQ: OK
+  check strong_ConstrainedSTLSQ vs alpha0_norm/ConstrainedSTLSQ_noaug: OK
+ShimizuMorioka noise=0.0: |orbits|=30 true-in-span=0.0e+00 (68s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ       3.4e-05               True    1.99e-05           0.00156
+strong_OrbitSTLSQ             3.4e-05               True    1.99e-05           0.00156
+strong_STLSQ                  3.4e-05               True    1.99e-05           0.00156
+weak_ConstrainedSTLSQ        1.84e-07               True    1.84e-07          6.45e-07
+weak_OrbitSTLSQ              1.84e-07               True    1.84e-07          6.45e-07
+weak_STLSQ                   1.84e-07               True    1.84e-07          6.45e-07

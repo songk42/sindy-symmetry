@@ -1,0 +1,11 @@
+RikitakeDynamo noise=0.01 N=50 done (61s)
+RikitakeDynamo noise=0.01 N=100 done (133s)
+RikitakeDynamo noise=0.01 N=200 done (209s)
+RikitakeDynamo noise=0.01 N=400 done (287s)
+RikitakeDynamo noise=0.01 N=800 done (363s)
+RikitakeDynamo noise=0.01 N=1600 done (441s)
+RikitakeDynamo noise=0.01 N=3200 done (519s)
+RikitakeDynamo noise=0.01 N=6400 done (599s)
+RikitakeDynamo noise=0.01 N=10000 done (680s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

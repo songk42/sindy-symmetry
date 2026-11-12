@@ -1,0 +1,11 @@
+HyperBao noise=0.01 N=50 done (175s)
+HyperBao noise=0.01 N=100 done (347s)
+HyperBao noise=0.01 N=200 done (513s)
+HyperBao noise=0.01 N=400 done (692s)
+HyperBao noise=0.01 N=800 done (874s)
+HyperBao noise=0.01 N=1600 done (1060s)
+HyperBao noise=0.01 N=3200 done (1249s)
+HyperBao noise=0.01 N=6400 done (1450s)
+HyperBao noise=0.01 N=10000 done (1675s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

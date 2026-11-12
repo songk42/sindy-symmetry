@@ -1,0 +1,11 @@
+MooreSpiegel noise=0.0 N=50 done (65s)
+MooreSpiegel noise=0.0 N=100 done (123s)
+MooreSpiegel noise=0.0 N=200 done (192s)
+MooreSpiegel noise=0.0 N=400 done (266s)
+MooreSpiegel noise=0.0 N=800 done (339s)
+MooreSpiegel noise=0.0 N=1600 done (412s)
+MooreSpiegel noise=0.0 N=3200 done (486s)
+MooreSpiegel noise=0.0 N=6400 done (560s)
+MooreSpiegel noise=0.0 N=10000 done (636s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

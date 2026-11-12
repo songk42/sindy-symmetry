@@ -1,0 +1,12 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('RayleighBenard', 0.05)]
+  check strong_STLSQ vs alpha0_norm/STLSQ: OK
+  check strong_ConstrainedSTLSQ vs alpha0_norm/ConstrainedSTLSQ_noaug: OK
+RayleighBenard noise=0.05: |orbits|=30 true-in-span=0.0e+00 (28s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ          6.61              False       0.671              1.07
+strong_OrbitSTLSQ                6.61              False       0.671              1.07
+strong_STLSQ                     6.61              False       0.671              1.07
+weak_ConstrainedSTLSQ            10.2              False       0.737               inf
+weak_OrbitSTLSQ                  10.2              False       0.737               inf
+weak_STLSQ                       10.2              False       0.737               inf

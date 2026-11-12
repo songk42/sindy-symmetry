@@ -1,0 +1,2 @@
+system,dim,cond_mono,cond_leg,nnz_mono,nnz_leg,basis_err,C_resid_mono,C_resid_leg
+HenonHeiles,4,7779036047751.936,4172910694073.1284,7,12,1.4221401833935943e-12,0.0,0.0

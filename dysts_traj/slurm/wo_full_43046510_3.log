@@ -1,0 +1,10 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('Arneodo', 0.1)]
+Arneodo noise=0.1: |orbits|=39 true-in-span=0.0e+00 (47s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ        0.0568               True      0.0278            0.0553
+strong_OrbitSTLSQ              0.0568               True      0.0278            0.0553
+strong_STLSQ                   0.0568               True      0.0278            0.0553
+weak_ConstrainedSTLSQ          0.0222               True      0.0283            0.0506
+weak_OrbitSTLSQ                0.0222               True      0.0283            0.0506
+weak_STLSQ                     0.0222               True      0.0283            0.0506

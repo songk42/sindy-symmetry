@@ -1,0 +1,12 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('DequanLi', 0.0)]
+  check strong_STLSQ vs alpha0_norm/STLSQ: OK
+  check strong_ConstrainedSTLSQ vs alpha0_norm/ConstrainedSTLSQ_noaug: OK
+DequanLi noise=0.0: |orbits|=30 true-in-span=0.0e+00 (246s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ      5.79e-06               True    4.75e-06          0.000122
+strong_OrbitSTLSQ            5.79e-06               True    4.75e-06          0.000122
+strong_STLSQ                 5.79e-06               True    4.75e-06          0.000122
+weak_ConstrainedSTLSQ        2.59e-08               True    2.59e-08          5.23e-08
+weak_OrbitSTLSQ              2.59e-08               True    2.59e-08          5.23e-08
+weak_STLSQ                   2.59e-08               True    2.59e-08          5.23e-08

@@ -1,0 +1,12 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('VallisElNino', 0.01)]
+  check strong_STLSQ vs alpha0_norm/STLSQ: OK
+  check strong_ConstrainedSTLSQ vs alpha0_norm/ConstrainedSTLSQ_noaug: OK
+VallisElNino noise=0.01: |orbits|=30 true-in-span=0.0e+00 (19s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ        0.0156              False      0.0189              1.15
+strong_OrbitSTLSQ              0.0156              False      0.0189              1.15
+strong_STLSQ                   0.0156              False      0.0189              1.15
+weak_ConstrainedSTLSQ          0.0124              False      0.0132             0.803
+weak_OrbitSTLSQ                0.0124              False      0.0132             0.803
+weak_STLSQ                     0.0124              False      0.0132             0.803

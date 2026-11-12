@@ -1,0 +1,11 @@
+HenonHeiles noise=0.01 N=50 done (356s)
+HenonHeiles noise=0.01 N=100 done (767s)
+HenonHeiles noise=0.01 N=200 done (1212s)
+HenonHeiles noise=0.01 N=400 done (1826s)
+HenonHeiles noise=0.01 N=800 done (2450s)
+HenonHeiles noise=0.01 N=1600 done (3075s)
+HenonHeiles noise=0.01 N=3200 done (3697s)
+HenonHeiles noise=0.01 N=6400 done (4318s)
+HenonHeiles noise=0.01 N=10000 done (4933s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK

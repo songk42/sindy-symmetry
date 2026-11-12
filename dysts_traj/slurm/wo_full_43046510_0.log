@@ -1,0 +1,12 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('Arneodo', 0.0)]
+  check strong_STLSQ vs alpha0_norm/STLSQ: OK
+  check strong_ConstrainedSTLSQ vs alpha0_norm/ConstrainedSTLSQ_noaug: OK
+Arneodo noise=0.0: |orbits|=39 true-in-span=0.0e+00 (58s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ      8.12e-06               True    3.86e-06          1.22e-05
+strong_OrbitSTLSQ            8.12e-06               True    3.86e-06          1.22e-05
+strong_STLSQ                 8.12e-06               True    3.86e-06          1.22e-05
+weak_ConstrainedSTLSQ        1.09e-08               True     1.1e-08           7.2e-09
+weak_OrbitSTLSQ              1.09e-08               True     1.1e-08           7.2e-09
+weak_STLSQ                   1.09e-08               True     1.1e-08           7.2e-09

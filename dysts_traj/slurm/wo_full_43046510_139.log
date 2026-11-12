@@ -1,0 +1,10 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('Rucklidge', 0.1)]
+Rucklidge noise=0.1: |orbits|=30 true-in-span=0.0e+00 (29s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ        0.0244               True      0.0207             0.118
+strong_OrbitSTLSQ              0.0244               True      0.0207             0.118
+strong_STLSQ                   0.0244               True      0.0207             0.118
+weak_ConstrainedSTLSQ          0.0107               True      0.0127            0.0289
+weak_OrbitSTLSQ                0.0107               True      0.0127            0.0289
+weak_STLSQ                     0.0107               True      0.0127            0.0289

@@ -1,0 +1,10 @@
+weak: m=25 p=8 stride=0; forms=['strong', 'weak']; tasks=[('LorenzStenflo', 0.1)]
+LorenzStenflo noise=0.1: |orbits|=73 true-in-span=0.0e+00 (51s)
+                         coef_rel_err  exact_support_rel  vf_rel_err  traj_nrmse_clean
+method                                                                                
+strong_ConstrainedSTLSQ         0.145              False       0.284              1.47
+strong_OrbitSTLSQ               0.145              False       0.284              1.47
+strong_STLSQ                    0.145              False       0.284              1.47
+weak_ConstrainedSTLSQ           0.818              False       0.829               inf
+weak_OrbitSTLSQ                 0.818              False       0.829               inf
+weak_STLSQ                      0.738              False       0.777               inf

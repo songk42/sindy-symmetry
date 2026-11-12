@@ -1,0 +1,11 @@
+SprottB noise=0.0 N=50 done (31s)
+SprottB noise=0.0 N=100 done (60s)
+SprottB noise=0.0 N=200 done (89s)
+SprottB noise=0.0 N=400 done (117s)
+SprottB noise=0.0 N=800 done (146s)
+SprottB noise=0.0 N=1600 done (175s)
+SprottB noise=0.0 N=3200 done (205s)
+SprottB noise=0.0 N=6400 done (235s)
+SprottB noise=0.0 N=10000 done (267s)
+  check strong_STLSQ vs STLSQ_scaled: 225 rows, OK
+  check strong_ConstrainedSTLSQ vs ConstrainedSTLSQ_scaled: 225 rows, OK
